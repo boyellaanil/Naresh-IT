@@ -1,0 +1,15 @@
+/* body{
+    height : 100vh;
+    background: linear-gradient(135deg,aqua, green, yellow);
+}*/
+h1{ 
+
+    font-size: 40px;
+
+}
+img{
+    height: 100px;
+    max-width: max-content;
+    filter:hue-rotate(120deg);
+    /* clip-path: */
+}
