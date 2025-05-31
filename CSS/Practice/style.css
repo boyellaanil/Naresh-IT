@@ -1,10 +1,12 @@
-/* body{
-    height : 100vh;
+p{
     background: linear-gradient(135deg,aqua, green, yellow);
-}*/
+}
 h1{ 
 
     font-size: 40px;
+    background-image: url(incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp);
+    color: transparent;
+    background-clip: text;
 
 }
 img{
