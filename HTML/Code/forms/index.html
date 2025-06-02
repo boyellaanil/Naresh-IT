@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forms</title>
+</head>
+<body>
+    <form action="">
+        <input type="email" placeholder="Enter email"><br><br>
+    <input type="password" placeholder="Enter Password"><br><br>
+    <input type="datetime-local" name="" id="">
+    <input type="date" name="" id=""><br><br>
+    <input type="time" name="" id=""><br><br>
+    <input type="color" name="" id="">
+    <br><br>
+    <input type="file" accept=".pdf" name="" id=""><br><br>
+    <input type="month" name="" id="">
+    <input type="week"><br><br>
+    <input type="number" name="" id=""> -->
+			<!-- <input type="button" value="submit"> -->
+			<input
+				type="hidden"
+				name="" />
+			<button type="submit">submit</button>
+			<button type="reset">RESET</button>
+			<button type="button">button</button>
+    </form>
+  <form action="" method="post">
+    <h2>Types of Inputs</h2>
+
+    <label for="na">Enter Text:</label>
+    <input type="text" id="na" name="na" placeholder="Enter text" />
+    <br><br>
+
+    <!-- Radio Buttons -->
+    Gender:
+    <input type="radio" name="gender" id="m" value="male" />
+    <label for="m">Male</label>
+    <input type="radio" name="gender" id="f" value="female" />
+    <label for="f">Female</label>
+    <br><br>
+
+    <!-- Checkboxes -->
+    Languages Known:<br>
+    <input type="checkbox" name="lang" id="en" value="English" />
+    <label for="en">English</label>
+    <input type="checkbox" name="lang" id="hi" value="Hindi" />
+    <label for="hi">Hindi</label>
+    <input type="checkbox" name="lang" id="kn" value="Kannada" />
+    <label for="kn">Kannada</label>
+    <input type="checkbox" name="lang" id="te" value="Telugu" />
+    <label for="te">Telugu</label>
+    <br><br>
+
+    <!-- Dropdown -->
+    <label for="course">Select Course(s):</label><br>
+    <select name="course" id="course" multiple>
+      <option disabled selected>Select any course</option>
+      <optgroup label="Programming">
+        <option value="java">JAVA</option>
+        <option value="python">Python</option>
+        <option value="c#">C#</option>
+        <option value="js">JavaScript</option>
+        <option value="c">C</option>
+      </optgroup>
+      <optgroup label="Databases">
+        <option value="mysql">MySQL</option>
+        <option value="mongodb">MongoDB</option>
+      </optgroup>
+      <optgroup label="Frontend">
+        <option value="react">React</option>
+        <option value="angular">Angular</option>
+      </optgroup>
+    </select>
+    <br><br>
+
+    <!-- Other Input Types -->
+    <input type="search" name="search" placeholder="Search here..." /><br><br>
+
+    <textarea name="comments" cols="50" rows="5" placeholder="Your comments..."></textarea>
+    <br><br>
+
+    <input type="email" name="email" placeholder="Enter email" /><br><br>
+    <input type="password" name="password" placeholder="Enter password" /><br><br>
+    <input type="datetime-local" name="datetime" /><br><br>
+    <input type="date" name="date" /><br><br>
+    <input type="time" name="time" /><br><br>
+    <input type="color" name="favcolor" /><br><br>
+    <input type="file" name="upload" accept=".pdf" /><br><br>
+    <input type="month" name="month" />
+    <input type="week" name="week" /><br><br>
+    <input type="number" name="quantity" placeholder="Enter a number" /><br><br>
+
+    <!-- Hidden input -->
+    <input type="hidden" name="formID" value="12345" />
+
+    <!-- Buttons -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button" onclick="alert('Just a button')">Button</button>
+  </form>
+</body>
+</html>
