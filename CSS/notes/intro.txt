@@ -1,0 +1,201 @@
+CSS: 
+  CSS stands for cascading styled sheets. These are used to style, design the webpages considering the pages UI and UX. 
+
+  How to connect CSS to HTML?
+  There are three kinds of CSS. They are
+  i. Inline CSS: This CSS will use 'style' as a attribute to any HTML element and it will assign different properties and values to that element.
+   <p style="background-color: blue;color: aliceblue;">Hello</p>
+
+  ii. Internal CSS : sometimes, it's difficult to style each element individually using inline CSS. at that times, to Apply group CSS, we can use , Internal CSS. This CSS will use 'style' as a element(usually defined at end of head)
+  it also contains, multiple properties and values to elements
+
+  <style>
+        p
+        {
+            background-color: blue;
+            color: white;
+        }
+        body
+        {
+         background-color: darkkhaki;
+        }
+    </style>
+
+
+   iii. External CSS:  it is exactly same as internal CSS but it will be written in separate file with extension .css and we link css to HTML using 'link' tag
+
+   <link rel="stylesheet" href="css file link" />
+
+
+   inline is always powerful and every style overrides its previous style called cascading
+
+
+   selectors:
+   To select the elements we use selectors, There are so many selectors in CSS but basic selectors are three.
+   a. tag name : we can select all elements of specific tag name using tag name selectors
+     eg: tagname
+     {
+        properties:values;
+     }
+
+   b. class name : class is a attribute to element which is used to identify the element. one element might contain multiple class names and multiple elements may have same class name.
+   classes are generally used to identify set of elements
+   To select class name , we use dot before classname
+
+  <p class="para para2">para2</p>
+  <p class="para">para3</p>
+  <p class="para2">para4</p>
+
+   .para{
+    background-color: yellow;
+    color: black;
+    }
+
+  c. id :  To select single element, we use id selector. no two elements will have same id and one element cannot have more than one id. To use id selector, we keep # before id name
+  <p class="para" id="chitti">para3</p>
+
+  #chitti{
+    background-color: darkorange;
+}
+
+ id  > class name > tag name
+
+Design :  
+     Design of the web page depends on its brand, target audience and context to mention..
+     For design, main things to consider are colors, fonts, units 
+
+color: color represents brand and for good design , we have colors like primary, secondary and accent in 60-30-10 ratio. colors can be choosen by 
+color wheel or below websites
+
+coolors.com
+pallentor.com
+realtimecolors.com
+
+Every colors tells a message to human called color theroy.
+In CSS , we can mention colors in different ways
+  --> colorname : we can directly assign color using its name
+  --> RGB : we can assign color by giving values of red, green , blue. each value goes from 0 to 255.
+  --> RGBA : we can RGB with some opacity ranging from 0.0 to 1.0 called alpha
+  --> Hexcode : we can assign any color using hexa decimal code followed by #
+  --> hsl : we can assign colors by using hue, saturation,lightness
+  hue -- degree of color in color wheel
+  saturation --colors towards the darkness
+  lightness  --colors towards the white
+
+  background properties:
+     we can give different colors and mix of colors to background using
+     
+     background: linear-gradient(option, color1,color2....) --> it makes background with mix of colors in linear way . option can be to left,to right, to top, to bottom or some degree
+     
+     background:radial-gradient(color1,color2..)--> it makes background with mix of colros in circular way. 
+
+     background-image: url('image path') --> it makes an image as background. by default it will repeat
+     background-repeat : repeat / no-repeat /repeat-x /repeat-y
+     background-position : left/right/center
+     background-size : auto/cover/contain
+
+
+Fonts:
+    Fonts also represents brand language. There are basically 5 types of font families are there.
+    i. serif: these fonts will have stroke at end of corners
+    eg: Times New Roman
+    ii. sans-serif : sans-serif fonts will not have stroke at the letter corners
+    eg: Arial
+    iii. monospace : monospace fonts will have equal width and height with same space like typewriter eg: courier new
+    iv. cursive : cursive fonts mimics the hand writing
+    v.modern/fantasy : modern or fantasy fonts are used for special effects like titles, animated messages etc..,
+
+How to assign font families in CSS?
+   --> we can assign font-families using 'font-family' property directly
+   --> we can embed some fonts from google fonts and import them and use them
+   ( google fonts --> select font --> get font --> get embed code --> @import)
+   --> we can download a font from dafont.com and use them using
+    @font-face{
+      font-family : familyname;
+      src:url('font path');
+    }
+
+    font-properties:
+    font-family : defines the type of font family and its name
+    font-size : defines the size of font
+    font-weight: defines the boldness of font( bold/bolder/normal /100-900)
+    font-style : defines the style of font(normal/italic/oblique)
+                 italic and oblique are similar but italic are cursive in nature
+    
+
+    units :
+    There are different units to measure the size in css
+    px  -- it is the smallest unit of screen. used for smaller units
+    % -- it is used to specify % of parent
+   vh/vw -- it stands for viewport height and viewport width
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
