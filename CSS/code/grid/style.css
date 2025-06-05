@@ -1,0 +1,29 @@
+.parent{
+    height:200px;
+    width:500px;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows:repeat(3, 1fr); ;
+    gap:10px; */
+
+}
+.child{
+    /* width:50px; */
+    color:white;
+    background-color: green;
+    border:1px solid white;
+}
+.child2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
+}
+.child6{
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    background-color: blue;
+}
