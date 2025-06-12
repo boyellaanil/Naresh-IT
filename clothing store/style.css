@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+:root{
+    --primary-color:blue;
+    --secondary-color:rgb(189, 189, 247);
+}
+header{
+    background-color: blue;
+    color: white;
+    font-size:48px;
+    text-align:center;
+    font-family: "Dancing Script", cursive;
+    padding: 10px 0px;
+}
+footer{
+ background-color: rgb(189, 189, 247);
+ color:white;
+}
