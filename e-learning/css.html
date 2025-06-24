@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+        <h1>CSS</h1>
+    </header>
+    <div class="container">
+        <aside class="topics">
+        <a href="#introduction">Introduction</a>
+        <a href="#typesofcss">Types of CSS</a>
+        <a href="#basic-selectors">Basic Selectors</a>
+        <a href="#colors">Colors</a>
+        <a href="#backgrounds">Backgrounds</a>
+        <a href="#borders">Borders</a>
+        <a href="#hei-wid">CSS Height and Width</a>
+        <a href="#fonts">Fonts</a>
+        <a href="#units">Units</a>
+        <a href="#box-model">Box Model</a>
+        <a href="#float">Float</a>
+        <a href="#pseudo">CSS Pseudo-classes and Pseudo-elements</a>
+        <a href="#lists">Lists</a>
+        <a href="#tables">Tables</a>
+        <a href="#display">Display</a>
+        <a href="#flex">flex</a>
+        <a href="#flexbox">Flexbox</a>
+        <a href="#grid">Grid</a>
+        <a href="#transitions">Transistions</a>
+        <a href="#positions">Positions</a>
+        <a href="#animations">Animations</a>
+        <a href="#media-queries">Media Queries</a>
+        <a href="#responsive">Responsive Design</a>
+        <a href="#adv-selectors">Advanced Selectors</a>
+    </aside>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML. It controls the layout of multiple web pages all at once.</p>
+            <p>CSS allows you to apply styles to web pages, including colors, fonts,
+            spacing, and positioning of elements. It separates content from design, making it easier to maintain and update the look of a website.</p>
+            <p>CSS is essential for creating visually appealing and user-friendly web pages. It enables developers to create responsive designs that adapt to different screen sizes and devices.</p>
+            <p>In this section, we will cover the basics of CSS, including how to link a CSS file to an HTML document, the syntax of CSS rules, and how to apply styles to HTML elements.</p>
+            <p>We will also explore the box model, which is fundamental to understanding how elements are displayed on a web page. The box model consists of margins, borders, padding, and the content area, and it determines how space is allocated around elements.</p>
+            <p>By the end of this section, you will have a solid understanding of CSS and be able to apply basic styles to your web pages.</p>
+        </section>
+
+       <section id="typesofcss">
+        <h2>Types of CSS</h2>
+         <p>There are three main ways to apply CSS to HTML documents:</p>
+             <ul>
+                 <li><strong>Inline CSS:</strong> Styles are applied directly within an HTML element using the <code>style</code> attribute.</li>
+                <li><strong>Internal CSS:</strong> Styles are defined within a <code>&lt; style&gt;</code> tag in the <code>&lt;head&gt;</code> section of the HTML document.</li>
+                <li><strong>External CSS:</strong> Styles are defined in a separate <code>.css</code> file, which is linked to the HTML document using the <code>&lt;link&gt;</code> tag.</li>
+            </ul>
+        <p><strong>Note:</strong> External CSS is the most common and recommended method as it allows for better organization and reusability of styles across multiple pages.</p>
+         </section>
+
+        <section id="basic-selectors">
+            <h2>Basic Selectors</h2>
+            <p>CSS selectors are patterns used to select the elements you want to style. The most common selectors include:</p>
+            <ul>
+                <li><strong>Element Selector:</strong> Selects all elements of a given type (e.g., `p`, `h1`, `div`).</li>
+                <li><strong>Class Selector:</strong> Selects elements with a specific class attribute (e.g., `.classname`).</li>
+                <li><strong>ID Selector:</strong> Selects a single element with a specific ID attribute (e.g., `#idname`).</li>
+                <li><strong>Universal Selector:</strong> Selects all elements (`*`).</li>
+            </ul>
+            <p>Selectors can be combined and nested to target specific elements more precisely.</p>
+        </section>
+
+        <section id="colors">
+            <h2>Colors</h2>
+            <p>CSS allows you to specify colors in various ways, including:</p>
+            <ul>
+                <li>Named colors (e.g., `red`, `blue`, `green`).</li>
+                <li>Hexadecimal values (e.g., `#ff0000` for red).</li>
+                <li>RGB values (e.g., `rgb(255, 0, 0)` for red).</li>
+                <li>RGBA values (e.g., `rgba(255, 0, 0, 0.5)` for semi-transparent red).</li>
+            </ul>
+            <p>You can apply colors to text, backgrounds, borders, and other elements.</p>
+        </section>
+
+        <section id="backgrounds">
+            <h2>Backgrounds</h2>
+            <p>CSS allows you to set background colors and images for elements. Common properties include:</p>
+            <ul>
+                <li><strong>background-color:</strong> Sets the background color of an element.</li>
+                <li><strong>background-image:</strong> Sets an image as the background.</li>
+                <li><strong>background-size:</strong> Controls the size of the background image (e.g., `cover`, `contain`).</li>
+                <li><strong>background-repeat:</strong> Determines if the background image should repeat (e.g., `no-repeat`, `repeat`).</li>
+            </ul>
+            <p>Backgrounds can enhance the visual appeal of web pages and create engaging designs.</p>
+        </section>
+
+        <section id="borders">
+            <h2>Borders</h2>
+            <p>CSS allows you to add borders to elements, enhancing their appearance. Common properties include:</p>
+            <ul>
+                <li><strong>border-width:</strong> Sets the width of the border (e.g., `1px`, `2em`).</li>
+                <li><strong>border-style:</strong> Defines the style of the border (e.g., `solid`, `dashed`, `dotted`).</li>
+                <li><strong>border-color:</strong> Sets the color of the border.</li>
+            </ul>
+            <p>You can also use shorthand properties like `border` to set all three properties at once.</p>
+        </section>
+
+        <section id="hei-wid">
+            <h2>CSS Height and Width</h2>
+            <p>CSS allows you to control the height and width of elements. Common properties include:</p>
+            <ul>
+                <li><strong>width:</strong> Sets the width of an element (e.g., `100px`, `50%`).</li>
+                <li><strong>height:</strong> Sets the height of an element (e.g., `200px`, `auto`).</li>
+                <li><strong>max-width:</strong> Sets the maximum width an element can have.</li>
+                <li><strong>min-height:</strong> Sets the minimum height an element must have.</li>
+            </ul>
+            <p>Understanding how to use these properties is essential for creating responsive designs.</p>
+        </section>
+
+        <section id="fonts">
+            <h2>Fonts</h2>
+            <p>CSS allows you to control the typography of your web pages. You can specify font families, sizes, weights, and styles. Common properties include:</p>
+            <ul>
+                <li><strong>font-family:</strong> Specifies the font to use (e.g., `Arial`, `Times New Roman`).</li>
+                <li><strong>font-size:</strong> Sets the size of the font (e.g., `16px`, `1.5em`).</li>
+                <li><strong>font-weight:</strong> Controls the thickness of the text (e.g., `normal`, `bold`).</li>
+                <li><strong>font-style:</strong> Applies styles like italic or oblique.</li>
+            </ul>
+            <p>You can also use web fonts by linking to external font libraries like Google Fonts.</p>
+        </section>
+
+        <section id="units">
+            <h2>Units</h2>
+            <p>CSS uses various units to define sizes and measurements. Common units include:</p>
+            <ul>
+                <li><strong>Pixels (px):</strong> Fixed size, commonly used for precise control.</li>
+                <li><strong>Em (em):</strong> Relative to the font size of the element.</li>
+                <li><strong>Rem (rem):</strong> Relative to the root element's font size.</li>
+                <li><strong>Percentages (%):</strong> Relative to the parent element's size.</li>
+            </ul>
+            <p>Understanding these units is crucial for creating responsive designs.</p>
+        </section>
+
+        <section id="box-model">
+            <h2>Box Model</h2>
+            <p>The CSS box model describes how elements are structured and how space is allocated around them. It consists of:</p>
+            <ul>
+                <li><strong>Content:</strong> The actual content of the element (text, images, etc.).</li>
+                <li><strong>Padding:</strong> Space between the content and the border.</li>
+                <li><strong>Border:</strong> A line surrounding the padding and content.</li>
+                <li><strong>Margin:</strong> Space outside the border, separating the element from others.</li>
+            </ul>
+            <p>Understanding the box model is essential for controlling layout and spacing in web design.</p>
+        </section>
+
+        <section id="float">
+            <h2>Float</h2>
+            <p>The `float` property allows elements to be positioned to the left or right of their container, allowing text and inline elements to wrap around them. Common values include:</p>
+            <ul>
+                <li><strong>left:</strong> Floats the element to the left.</li>
+                <li><strong>right:</strong> Floats the element to the right.</li>
+                <li><strong>none:</strong> Removes any floating.</li>
+            </ul>
+            <p>Floating is often used for layout purposes, but it can lead to layout issues if not managed properly.</p>
+        </section>
+
+        <section id="pseudo">
+            <h2>CSS Pseudo-classes and Pseudo-elements</h2>
+            <p>Pseudo-classes and pseudo-elements allow you to style elements based on their state or position in the document. Common pseudo-classes include:</p>
+            <ul>
+                <li><strong>:hover</strong> - Styles an element when the mouse hovers over it.</li>
+                <li><strong>:active</strong> - Styles an element when it is being clicked.</li>
+                <li><strong>:focus</strong> - Styles an element when it has focus (e.g., input fields).</li>
+            </ul>
+            <p>Pseudo-elements allow you to style specific parts of an element, such as:</p>
+            <ul>
+                <li><strong>::before</strong> - Inserts content before the element's content.</li>
+                <li><strong>::after</strong> - Inserts content after the element's content.</li>
+            </ul>
+            <p>These features enhance interactivity and visual effects on web pages.</p>
+        </section>
+
+        <section id="lists">
+            <h2>Lists</h2>
+            <p>CSS provides styles for both ordered and unordered lists. You can customize the appearance of list items using properties like:</p>
+            <ul>
+                <li><strong>list-style-type:</strong> Changes the bullet or numbering style (e.g., `disc`, `circle`, `decimal`).</li>
+                <li><strong>list-style-image:</strong> Uses an image as the bullet.</li>
+                <li><strong>list-style-position:</strong> Controls whether the bullet is inside or outside the list item.</li>
+            </ul>
+            <p>Lists can be styled to create visually appealing navigation menus and other list-based layouts.</p>
+        </section>
+
+        <section id="tables">
+            <h2>Tables</h2>
+            <p>CSS allows you to style HTML tables, making them more visually appealing and easier to read. Common properties include:</p>
+            <ul>
+                <li><strong>border:</strong> Sets the border around table cells.</li>
+                <li><strong>padding:</strong> Adds space inside table cells.</li>
+                <li><strong>background-color:</strong> Changes the background color of table cells.</li>
+                <li><strong>text-align:</strong> Controls the alignment of text within cells.</li>
+            </ul>
+            <p>Tables can be styled to create responsive layouts and data presentations.</p>
+        </section>
+
+        <section id="display">
+            <h2>Display</h2>
+            <p>The `display` property controls how elements are displayed on the page. Common values include:</p>
+            <ul>
+                <li><strong>block:</strong> The element is displayed as a block-level element, taking up the full width.</li>
+                <li><strong>inline:</strong> The element is displayed as an inline element, only taking up as much width as necessary.</li>
+                <li><strong>inline-block:</strong> Combines block and inline behavior, allowing for width and height to be set.</li>
+                <li><strong>none:</strong> The element is not displayed at all.</li>
+            </ul>
+            <p>Understanding the display property is crucial for controlling layout and positioning of elements.</p>
+        </section>
+
+        <section id="flex">
+            <h2>Flex</h2>
+            <p>CSS Flexbox is a layout model that allows you to design complex layouts with ease. It provides a flexible way to align and distribute space among items in a container. Key properties include:</p>
+            <ul>
+                <li><strong>display: flex;</strong> - Enables flexbox on the container.</li>
+                <li><strong>flex-direction:</strong> - Defines the direction of the flex items (e.g., `row`, `column`).</li>
+                <li><strong>justify-content:</strong> - Aligns items along the main axis (e.g., `flex-start`, `center`, `space-between`).</li>
+                <li><strong>align-items:</strong> - Aligns items along the cross axis (e.g., `stretch`, `center`).</li>
+            </ul>
+            <p>Flexbox is particularly useful for creating responsive designs and aligning elements within a container.</p>
+        </section>
+
+        <section id="flexbox">
+            <h2>Flexbox</h2>
+            <p>Flexbox is a powerful layout system in CSS that allows you to create flexible and responsive layouts. It provides a way to align and distribute space among items in a container, making it easier to design complex layouts without using floats or positioning.</p>
+            <p>Key properties of Flexbox include:</p>
+            <ul>
+                <li><strong>display: flex;</strong> - Enables Flexbox on the container.</li>
+                <li><strong>flex-direction:</strong> - Defines the direction of the flex items (e.g., `row`, `column`).</li>
+                <li><strong>justify-content:</strong> - Aligns items along the main axis (e.g., `flex-start`, `center`, `space-between`).</li>
+                <li><strong>align-items:</strong> - Aligns items along the cross axis (e.g., `stretch`, `center`).</li>
+            </ul>
+            <p>Flexbox is particularly useful for creating responsive designs and aligning elements within a container.</p>
+        </section>
+
+        <section id="grid">
+            <h2>Grid</h2>
+            <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex grid-based designs. It provides a way to define rows and columns, making it easy to create responsive layouts. Key properties include:</p>
+            <ul>
+                <li><strong>display: grid;</strong> - Enables Grid on the container.</li>
+                <li><strong>grid-template-columns:</strong> - Defines the number and size of columns.</li>
+                <li><strong>grid-template-rows:</strong> - Defines the number and size of rows.</li>
+                <li><strong>grid-gap:</strong> - Sets the space between grid items.</li>
+            </ul>
+            <p>Grid is particularly useful for creating complex layouts with precise control over positioning and alignment.</p>
+        </section>
+
+        <section id="transitions">
+            <h2>Transitions</h2>
+            <p>CSS transitions allow you to create smooth animations when properties change. You can specify the duration, timing function, and properties to animate. Key properties include:</p>
+            <ul>
+                <li><strong>transition-property:</strong> Specifies the CSS property to animate.</li>
+                <li><strong>transition-duration:</strong> Sets the duration of the transition.</li>
+                <li><strong>transition-timing-function:</strong> Defines the speed curve of the transition (e.g., `ease`, `linear`).</li>
+            </ul>
+            <p>Transitions enhance user experience by providing visual feedback on interactions.</p>
+        </section>
+
+        <section id="positions">
+            <h2>Positions</h2>
+            <p>CSS provides several positioning methods to control the placement of elements on a page. Key properties include:</p>
+            <ul>
+                <li><strong>position:</strong> Defines how an element is positioned (e.g., `static`, `relative`, `absolute`, `fixed`).</li>
+                <li><strong>top, right, bottom, left:</strong> Specifies the offset from the respective edges of the containing block.</li>
+            </ul>
+            <p>Understanding positioning is crucial for creating complex layouts and controlling element visibility.</p>
+        </section>
+
+        <section id="animations">
+            <h2>Animations</h2>
+            <p>CSS animations allow you to create complex animations by defining keyframes. You can specify the styles at different points in the animation timeline. Key properties include:</p>
+            <ul>
+                <li><strong>@keyframes:</strong> Defines the animation sequence.</li>
+                <li><strong>animation-name:</strong> Specifies the name of the animation.</li>
+                <li><strong>animation-duration:</strong> Sets the duration of the animation.</li>
+                <li><strong>animation-timing-function:</strong> Defines the speed curve of the animation.</li>
+            </ul>
+            <p>Animations can be used to enhance user interactions and create engaging visual effects.</p>
+        </section>
+
+        <section id="media-queries">
+            <h2>Media Queries</h2>
+            <p>Media queries allow you to apply different styles based on the characteristics of the device, such as screen size, resolution, and orientation. They are essential for creating responsive designs. Key syntax includes:</p>
+            <pre>@media (max-width: 600px) {}</pre>
+            <p>This applies styles only when the viewport width is 600 pixels or less. You can use media queries to adjust layouts, font sizes, and other styles for different devices.</p>
+        </section>  
+
+        <section id="responsive">
+            <h2>Responsive Design</h2>
+            <p>Responsive design is an approach to web design that ensures web pages look good on all devices, from desktops to smartphones. It involves using flexible layouts, images, and CSS media queries to adapt the design to different screen sizes.</p>
+            <p>Key techniques for responsive design include:</p>
+            <ul>
+                <li>Using relative units (like percentages and ems) instead of fixed units (like pixels).</li>
+                <li>Implementing fluid grids that adjust based on the viewport size.</li>
+                <li>Utilizing media queries to apply different styles for various screen sizes.</li>
+            </ul>
+            <p>Responsive design enhances user experience by ensuring that content is accessible and visually appealing on any device.</p>
+        </section>
+
+        <section id="adv-selectors">
+            <h2>Advanced Selectors</h2>
+            <p>CSS provides advanced selectors that allow you to target elements more precisely. Some common advanced selectors include:</p>
+            <ul>
+                <li><strong>Attribute Selector:</strong> Selects elements based on their attributes (e.g., `[type="text"]`).</li>
+                <li><strong>Pseudo-classes:</strong> Selects elements based on their state (e.g., `:hover`, `:focus`).</li>
+                <li><strong>Pseudo-elements:</strong> Selects parts of an element (e.g., `::before`, `::after`).</li>
+            </ul>
+            <p>These selectors enable you to create more complex styles and interactions.</p>
+        </section>
+
+
+    </main>        
+    </div>
+</body>
+</html>

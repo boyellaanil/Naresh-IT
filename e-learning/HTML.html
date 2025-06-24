@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HTML</h1>
+    </header>
+    <div class="container">
+        <aside class="topics">
+        <a href="#intro">Introduction</a>
+        <a href="#ele-tags">Elements and Tags</a>
+        <a href="#comments">Comments</a>
+        <a href="#heading-tags">Heading Tags</a>
+        <a href="#paragraph-tag">Paragraph Tag</a>
+        <a href="#anchor-tag">Anchor Tag</a>
+        <a href="#images">Images</a>
+        <a href="#div-span">Div and Span</a>
+        <a href="#formatting-tags">Formatting Tags</a>
+        <a href="#lists">Lists</a>
+        <a href="#tables">Tables</a>
+        <a href="#forms">Forms</a>
+        <a href="#input-types">Input Types</a>
+        <a href="#html5">HTML 5</a>
+    
+    </aside>
+    <main>
+    <section id="intro">
+        <h1>HTML</h1>
+        <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a webpage using elements and tags.</p>
+        <p>HTML elements are represented by tags, which are enclosed in angle brackets. For example, the <code>&lt;h1&gt;</code> tag is used for main headings, while the <code>&lt;p&gt;</code> tag is used for paragraphs.</p>
+        <p>HTML documents can include text, images, links, and other multimedia content, making it a versatile language for web development.</p>
+        <p>Open tag is similar to &lt;tagname&gt; and closed tag is similar to&lt;/tagname&gt;</p>
+        <p>Complete HTML element contains two other elements such ad head and body</p>
+        <p>Basically an element is nothing but content between open and close tag</p>
+        <p>element=open tag + content + close tag</p>
+        <h3>Structure</h3>
+        <code>
+             &lt;html&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=================<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=================<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=================<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
+  &lt;/html&gt;
+        </code>
+        <p>In the above code:</p>
+        <pre>
+             
+            &lt;html&gt; - This is the root element of an HTML page.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt; - Contains meta-information about the document, such as its title.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt; - Sets the title of the document, which appears in the browser tab.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt; - Closes the head section.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt; - Contains the content of the document that is displayed in the browser.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt; - Closes the body section.<br>
+            &lt;/html&gt; - Closes the root element.
+        </pre>
+    </section>
+
+    <section id="ele-tags">
+        <h2>Elements and Tags</h2>
+        <p>HTML elements are the building blocks of HTML pages. An element consists of a start tag, content, and an end tag.</p>
+        <p>For example, the following is a simple HTML element:</p>
+        <pre>
+            &lt;tagname&gt;Content goes here&lt;/tagname&gt;
+        </pre>
+        <p>In this example, <code>tagname</code> is the name of the element, and "Content goes here" is the content of the element.</p>
+        <p>Some elements can be self-closing, meaning they do not require an end tag. For example:</p>
+        <pre>
+            &lt;img src="image.jpg" alt="Description"&gt;
+        </pre>
+        <p>In this case, the <code>&lt;img&gt;</code> tag is self-closing and does not have a separate end tag.</p>
+        <p>HTML tags are not case-sensitive, meaning <code>&lt;TAGNAME&gt;</code> and <code>&lt;tagname&gt;</code> are treated the same. However, it is a common practice to use lowercase for consistency.</p>
+        <p>HTML elements can also have attributes, which provide additional information about the element. Attributes are specified within the start tag and consist of a name and a value, like this:</p>
+        <pre>
+            &lt;tagname attribute="value"&gt;Content goes here&lt;/tagname&gt;
+        </pre>
+        <p>For example, the <code>&lt;a&gt;</code> tag (anchor tag) can have an <code>href</code> attribute to specify the URL of the link:</p>
+        <pre>
+            &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+        </pre>
+        <p>In this example, the <code>href</code> attribute specifies the URL that the link points to.</p>
+        </section>
+
+        <section id="comments">
+            <h2>Comments</h2>
+            <p>Comments in HTML are used to add notes or explanations within the code that are not displayed in the browser. They are useful for developers to document their code.</p>
+            <p>Comments are written using the following syntax:</p>
+            <pre>
+                &lt;!-- This is a comment --&gt;
+            </pre>
+            <p>Anything between the <code>&lt;!--</code> and <code>--&gt;</code> will be treated as a comment and will not be rendered in the browser.</p>
+            <p>For example:</p>
+            <pre>
+                &lt;!-- This is a comment and will not be displayed in the browser --&gt;
+                &lt;p&gt;This is a paragraph.&lt;/p&gt;
+            </pre>
+            <p>In this example, the comment will not be visible on the webpage, but it can help other developers understand the purpose of the code.</p>
+            <p>Comments can span multiple lines as well:</p>
+            <pre>
+                &lt;!--
+                This is a multi-line comment.
+                It can span multiple lines.
+                --&gt;
+            </pre>
+            <p>Using comments effectively can improve code readability and maintainability, especially in larger projects.</p>
+        </section>
+
+    <section id="heading-tags">
+        <h2>Heading Tags</h2>
+        <p>HTML provides six levels of headings, from <code>&lt;h1&gt;</code> (the highest level) to <code>&lt;h6&gt;</code> (the lowest level). These tags are used to define headings and subheadings in a document.</p>
+        <pre>
+            &lt;h1&gt;Main Heading&lt;/h1&gt;<br>
+            &lt;h2&gt;Subheading&lt;/h2&gt;<br>
+            &lt;h3&gt;Sub-subheading&lt;/h3&gt;<br>
+            &lt;h4&gt;Fourth Level Heading&lt;/h4&gt;<br>
+            &lt;h5&gt;Fifth Level Heading&lt;/h5&gt;<br>
+            &lt;h6&gt;Sixth Level Heading&lt;/h6&gt;
+        </pre>
+
+    </section>
+
+    <section id="paragraph-tag">
+        <h2>Paragraph Tag</h2>
+        <p>The paragraph tag is used to define a block of text. It is represented by the <code>&lt;p&gt;</code> tag.</p>
+        <pre>
+            &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+        </pre>
+        <p>Paragraphs are automatically separated by a blank line in the browser.</p>
+
+    </section>
+
+    <section id="anchor-tag">
+        <h2>Anchor Tag</h2>
+        <p>The anchor tag is used to create hyperlinks. It is represented by the <code>&lt;a&gt;</code> tag.</p>
+        <pre>
+            &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+        </pre>
+        <p>The <code>href</code> attribute specifies the URL of the page the link goes to.</p>
+        <p>When clicked, the link will take the user to the specified URL.</p>
+    </section>
+
+    <section id="images">
+        <h2>Images</h2>
+        <p>Images can be added to an HTML document using the <code>&lt;img&gt;</code> tag.</p>
+        <pre>
+            &lt;img src="image.jpg" alt="Description of image"&gt;
+        </pre>
+        <p>The <code>src</code> attribute specifies the path to the image file, and the <code>alt</code> attribute provides alternative text for the image.</p>
+    </section>
+
+    <section id="div-span">
+        <h2>Div and Span</h2>
+        <p>The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags are used for grouping content and applying styles.</p>
+        <p>The <code>&lt;div&gt;</code> tag is a block-level element, while the <code>&lt;span&gt;</code> tag is an inline element.</p>
+        <pre>
+            &lt;div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph inside a div.&lt;/p&gt;<br>
+            &lt;/div&gt;<br>
+            &lt;span style="color: red;"&gt;This is red text.&lt;/span&gt;
+        </pre>
+        <p>The <code>style</code> attribute can be used to apply CSS styles directly to these elements.</p>
+    </section>
+
+    <section id="formatting-tags">
+        <h2>Formatting Tags</h2>
+        <p>HTML provides several tags for formatting text, such as:</p>
+        <ul>
+            <li><code>&lt;strong&gt;</code> - Makes text bold</li>
+            <li><code>&lt;em&gt;</code> - Makes text italic</li>
+            <li><code>&lt;u&gt;</code> - Underlines text</li>
+            <li><code>&lt;mark&gt;</code> - Highlights text</li>
+            <li><code>&lt;small&gt;</code> - Decreases the text size</li>
+            <li><code>&lt;del&gt;</code> - Displays deleted (strikethrough) text</li>
+            <li><code>&lt;ins&gt;</code> - Displays inserted (underlined) text</li>
+            <li><code>&lt;sub&gt;</code> - Subscript text</li>
+            <li><code>&lt;sup&gt;</code> - Superscript text</li>
+            <li><code>&lt;abbr&gt;</code> - Abbreviation with a tooltip</li>
+        </ul>
+        <pre>
+            &lt;strong&gt;Bold Text&lt;/strong&gt;<br>
+            &lt;em&gt;Italic Text&lt;/em&gt;<br>
+            &lt;u&gt;Underlined Text&lt;/u&gt;<br>
+            &lt;mark&gt;Highlighted Text&lt;/mark&gt;<br>
+            &lt;small&gt;Small Text&lt;/small&gt;<br>
+            &lt;del&gt;Deleted Text&lt;/del&gt;<br>
+            &lt;ins&gt;Inserted Text&lt;/ins&gt;<br>
+            &lt;sub&gt;Subscript&lt;/sub&gt; and &lt;sup&gt;Superscript&lt;/sup&gt;<br>
+            &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;
+        </pre>
+    </section>
+
+    <section id="lists">
+        <h2>Lists</h2>
+        <p>HTML supports both ordered , unordered lists,definition lists</p>
+        <h3>Unordered List</h3>
+        <pre>
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
+            &lt;/ul&gt;
+        </pre>
+        <h3>Ordered List</h3>
+        <pre>
+            &lt;ol&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;First Item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Second Item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Third Item&lt;/li&gt;<br>
+            &lt;/ol&gt;
+        </pre>
+        <h3>Definition Lists</h3>
+        <pre>
+            &lt;dl&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Term 1&lt;/dt&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Definition of Term 1&lt;/dd&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Term 2&lt;/dt&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Definition of Term 2&lt;/dd&gt;<br>
+            &lt;/dl&gt;
+        </section>
+
+    <section id="tables">
+        <h2>Tables</h2>
+        <p>HTML tables are used to display data in a tabular format. They are created using the <code>&lt;table&gt;</code> tag, along with <code>&lt;tr&gt;</code> for table rows, <code>&lt;th&gt;</code> for table headers, and <code>&lt;td&gt;</code> for table data cells.</p>
+        <pre>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 1&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 2&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </pre>
+        <p>In the above code:</p>
+        <pre>
+            &lt;table&gt; - Starts the table.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt; - Starts a new table row.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt; - Defines a table header cell.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; - Defines a table data cell.<br>
+            &lt;/table&gt; - Ends the table.
+        </section>
+
+    <section id="forms">
+        <h2>Forms</h2>
+        <p>HTML forms are used to collect user input. They are created using the <code>&lt;form&gt;</code> tag, along with various input elements such as text fields, checkboxes, radio buttons, and submit buttons.</p>
+        <pre>
+            &lt;form action="/submit" method="post"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="name" name="name"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+            &lt;/form&gt;
+        </pre>
+        <p>In the above code:</p>
+        <pre>
+            &lt;form&gt; - Starts the form.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt; - Defines a label for an input element.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input&gt; - Defines an input field.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit"&gt; - Defines a submit button.<br>
+            &lt;/form&gt; - Ends the form.
+        </section>
+
+    <section id="input-types">
+        <h2>Input Types</h2>
+        <p>HTML provides various input types for forms, such as:</p>
+        <ul>
+             <li><code>text</code> - Single-line text input</li>&lt;input type="text" name="username"&gt;<br>
+            <li><code>password</code> - Password input (hidden characters)</li>&lt;input type="password" name="password"&gt;<br>
+            <li><code>email</code> - Email input with validation</li>&lt;input type="email" name="email"&gt;<br>
+            <li><code>number</code> - Numeric input with validation</li>&lt;input type="number" name="age"&gt;<br>
+            <li><code>checkbox</code> - Checkbox input</li>&lt;input type="checkbox" name="subscribe"&gt;<br>
+            <li><code>radio</code> - Radio button input</li>&lt;input type="radio" name="gender" value="male"&gt; Male<br>
+            <li><code>submit</code> - Submit button</li> &lt;input type="submit" value="Submit"&gt;<br>
+            <li><code>reset</code> - Reset button to clear form</li>&lt;input type="reset" value="Reset"&gt;<br>
+            <li><code>color</code> - Color picker input</li>&lt;input type="color" name="favcolor"&gt;<br>
+            <li><code>date</code> - Date selector</li>&lt;input type="date" name="birthdate"&gt;<br>
+            <li><code>range</code> - Range slider</li>&lt;input type="range" name="volume" min="0" max="100"&gt;<br>
+            <li><code>file</code> - File upload selector</li>&lt;input type="file" name="resume"&gt;<br>
+            <li><code>search</code> - Search field input</li>&lt;input type="search" name="query"&gt;<br>
+            <li><code>tel</code> - Telephone number input</li>&lt;input type="tel" name="phone"&gt;<br>
+            <li><code>url</code> - URL input field</li>&lt;input type="url" name="homepage"&gt;
+        </ul>
+        
+    </section>
+
+    <section id="html5">
+        <h2>HTML 5</h2>
+        <p>HTML5 is the latest version of HTML, which introduces new features and elements for modern web development. Some key features include:</p>
+        <ul>
+            <li>New semantic elements like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code>.</li>
+            <li>Support for multimedia elements like <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code>.</li>
+            <li>Improved form controls and input types.</li>
+            <li>Canvas element for drawing graphics.</li>
+        </ul>
+        
+        <h2>Semantic Elements</h2>
+        <p>Semantic elements provide meaning to the content they contain, making it easier for browsers and search engines to understand the structure of a webpage. Examples include:</p>
+        <ul>
+            <li><code>&lt;header&gt;</code> - Represents the header of a document or section.</li>
+            <li><code>&lt;footer&gt;</code> - Represents the footer of a document or section.</li>
+            <li><code>&lt;article&gt;</code> - Represents a self-contained piece of content.</li>
+            <li><code>&lt;section&gt;</code> - Represents a thematic grouping of content.</li>
+            <li><code>&lt;nav&gt;</code> - Represents a navigation section.</li>
+            <li><code>&lt;aside&gt;</code> - Represents content that is tang
+        </ul>
+        <h2>Multimedia</h2>
+        <p>HTML5 provides native support for multimedia content, allowing developers to embed audio and video directly into web pages without the need for third-party plugins.</p>
+        <h3>Audio</h3>
+        <pre>
+            &lt;audio controls&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="audio.mp3" type="audio/mpeg"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Your browser does not support the audio element.<br>
+            &lt;/audio&gt;
+        </pre>
+        <p>The <code>controls</code> attribute adds playback controls to the audio player</p>
+        <h3>Video</h3>
+        <pre>
+            &lt;video width="320" height="240" controls&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="video.mp4" type="video/mp4"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Your browser does not support the video tag.<br>
+            &lt;/video&gt;
+        </pre>
+        <p>The <code>width</code> and <code>height</code> attributes specify the dimensions of the video player.</p>
+        <p>Both audio and video elements can include multiple source files to ensure compatibility with different browsers and devices.</p>
+        <h3>Iframes</h3>
+        <p>An iframe (inline frame) is used to embed another HTML document within the current document. It is represented by the <code>&lt;iframe&gt;</code> tag.</p>
+        <pre>
+            &lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;
+        </pre>
+        <p>The <code>src</code> attribute specifies the URL of the document to be embedded, while the <code>width</code> and <code>height</code> attributes define the size of the iframe.</p>
+        <p>Using iframes, you can display content from other websites or applications within your own webpage, allowing for a seamless user experience.</p>
+         
+        <h2>Canvas</h2>
+        <p>The <code>&lt;canvas&gt;</code> element is used to draw graphics on the fly using JavaScript. It provides a space for rendering shapes, images, and animations.</p>
+        <pre>
+            &lt;canvas id="myCanvas" width="500" height="300"&gt;&lt;/canvas&gt;<br>
+            &lt;script&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var canvas = document.getElementById("myCanvas");<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var ctx = canvas.getContext("2d");<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;ctx.fillStyle = "blue";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;ctx.fillRect(20, 20, 150, 100);<br>
+            &lt;/script&gt;
+        </pre>
+        <p>In the above code:</p>
+        <pre>
+            &lt;canvas&gt; - Defines the canvas area.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;id="myCanvas" - Assigns an ID to the canvas for JavaScript access.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width and height - Set the dimensions of the canvas.<br>
+            &lt;script&gt; - Contains JavaScript code to draw on the canvas.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;getContext("2d") - Gets the 2D rendering context for drawing.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;fillStyle - Sets the fill color for shapes.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;fillRect - Draws a filled rectangle on the canvas.
+        </section>
+</div>
+</main>
+</body>
+</html>
