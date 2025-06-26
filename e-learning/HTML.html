@@ -124,7 +124,20 @@
             &lt;h5&gt;Fifth Level Heading&lt;/h5&gt;<br>
             &lt;h6&gt;Sixth Level Heading&lt;/h6&gt;
         </pre>
-
+        <p>In the above code:</p>
+        <pre>
+            &lt;h1&gt; - Represents the main heading of the document.<br>
+            &lt;h2&gt; - Represents a subheading under the main heading.<br>
+            &lt;h3&gt; - Represents a sub-subheading under the subheading.<br>
+            &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt; - Represent lower-level headings.
+        </pre>
+        <p>Headings are important for structuring content and improving accessibility. They help search engines understand the hierarchy of information on a webpage.</p>
+        <p>It is recommended to use headings in a logical order, starting with <code>&lt;h1&gt;</code> for the main title and using lower-level headings as needed. Avoid skipping heading levels (e.g., going from <code>&lt;h1&gt;</code> to <code>&lt;h3&gt;</code> without using <code>&lt;h2&gt;</code>).</p>
+        <p>Headings can also be styled using CSS to change their appearance, such as font size, color, and alignment. For example:</p>
+        <pre>
+            Example:
+            <img src="./assets/heading.png" alt="heading tags image">
+        </pre>
     </section>
 
     <section id="paragraph-tag">
@@ -134,55 +147,124 @@
             &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
         </pre>
         <p>Paragraphs are automatically separated by a blank line in the browser.</p>
+        <p>In the above code, the text "This is a paragraph of text." will be displayed as a separate paragraph on the webpage.</p>
+        <p>Paragraphs can contain text, links, images, and other inline elements. For example:</p>
+        <p>We use an emmet "Lorem" to get empty paragraph and also we can specify the paragraph size with how many words require like "Lorem20"will display paragph in 20 words.</p>
+        <pre>
+            Example 1:
+               Emmet is &lt;p&gt;Lorem&lt;/p&gt; and press enter to get a paragraph.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
+            Example 2:
+               Emmet is &lt;p&gt;Lorem20&lt;/p&gt; and press enter to get a paragraph with 20 words.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, animi quam voluptatibus enim praesentium accusamus deserunt quod sunt ab minus.
+        </pre>
     </section>
 
     <section id="anchor-tag">
-        <h2>Anchor Tag</h2>
-        <p>The anchor tag is used to create hyperlinks. It is represented by the <code>&lt;a&gt;</code> tag.</p>
-        <pre>
-            &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
-        </pre>
-        <p>The <code>href</code> attribute specifies the URL of the page the link goes to.</p>
-        <p>When clicked, the link will take the user to the specified URL.</p>
-    </section>
+    <h2>Anchor Tag</h2>
+    <p>The anchor tag is used to create hyperlinks. It is represented by the <code>&lt;a&gt;</code> tag.</p>
+    
+    <pre>
+Example:
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+    </pre>
+    
+    <p>The <code>href</code> attribute specifies the URL of the page the link goes to.</p>
+    <p>When clicked, the link will take the user to the specified URL.</p>
+    
+    <p>Anchor tags can also be used to link to specific sections within the same page using the "#" symbol followed by the ID of the target element. For example:</p>
+    <pre>
+&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;
+...
+&lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;
+    </pre>
+    <p>In this example, clicking the link will scroll the page to the element with the ID "section1".</p>
+    
+    <p>Anchor tags can also be used to create email links using the "mailto:" protocol. For example:</p>
+    <pre>
+&lt;a href="mailto:abc@gmail.com"&gt;Send Email&lt;/a&gt;
+    </pre>
+    <p>In this case, clicking the link will open the user's default email client with a new message addressed to <code>abc@gmail.com</code>.</p>
+    
+    <p>You can also add a subject and body to the email link:</p>
+    <pre>
+&lt;a href="mailto:abc@gmail.com?subject=Hello&amp;body=How are you?"&gt;Email with Subject&lt;/a&gt;
+    </pre>
+
+    <p>To open links in a new tab, use the target attribute with the value _blank:</p>
+    <pre>
+&lt;a href="https://www.google.com" target="_blank"&gt;Open Google in new tab&lt;/a&gt;
+    </pre>
+
+    <p>To improve security and SEO when using target="_blank", add rel="noopener noreferrer":</p>
+    <pre>
+&lt;a href="https://www.google.com" target="_blank" rel="noopener noreferrer"&gt;Secure New Tab Link&lt;/a&gt;
+    </pre>
+</section>
 
     <section id="images">
         <h2>Images</h2>
-        <p>Images can be added to an HTML document using the <code>&lt;img&gt;</code> tag.</p>
+        <p>Images can be added to an HTML document using the &lt;img&gt; tag.</p>
         <pre>
             &lt;img src="image.jpg" alt="Description of image"&gt;
         </pre>
-        <p>The <code>src</code> attribute specifies the path to the image file, and the <code>alt</code> attribute provides alternative text for the image.</p>
+        <p>The "src" attribute specifies the path to the image file, and the "alt" attribute provides alternative text for the image.</p>
+        <p>For example:</p>
+        <pre>
+            &lt;img src="https://www.example.com/image.jpg" alt="A beautiful scenery"&gt;
+        </pre>
+        <p>In this example, the image will be displayed on the webpage, and if the image cannot be loaded, the alternative text "A beautiful scenery" will be shown instead.</p>
+        <p>Images can also be resized using the "width" and "height" attributes:</p>
+        <pre>
+            &lt;img src="image.jpg" alt="Description of image" width="300" height="200"&gt;
+        </pre>
+        <p>In this case, the image will be displayed with a width of 300 pixels and a height of 200 pixels.</p>
+        <p>It is important to use the "alt" attribute for accessibility purposes, as it provides a text alternative for users who cannot see the image, such as those using screen readers.</p>
     </section>
 
     <section id="div-span">
         <h2>Div and Span</h2>
-        <p>The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags are used for grouping content and applying styles.</p>
-        <p>The <code>&lt;div&gt;</code> tag is a block-level element, while the <code>&lt;span&gt;</code> tag is an inline element.</p>
+        <p>The &lt;div&gt; and &lt;span&gt; tags are used for grouping content and applying styles.</p>
+        <p>The &lt;div&gt; tag is a block-level element, while the &lt;span&gt; tag is an inline element.</p>
         <pre>
             &lt;div&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph inside a div.&lt;/p&gt;<br>
             &lt;/div&gt;<br>
             &lt;span style="color: red;"&gt;This is red text.&lt;/span&gt;
         </pre>
-        <p>The <code>style</code> attribute can be used to apply CSS styles directly to these elements.</p>
+        <p>The "style" attribute can be used to apply CSS styles directly to these elements.</p>
+        <p>For example, you can use the &lt;div&gt; tag to create a section of a webpage:</p>
+        <pre>
+            &lt;div class="container"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Section Title&lt;/h2&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a section of content.&lt;/p&gt;<br>
+            &lt;/div&gt;
+        </pre>
+        <p>In this example, the &lt;div&gt; tag is used to group a heading and a paragraph together, creating a section of content that can be styled as a whole.</p>
+        <p>The &lt;span&gt; tag is often used to apply styles to a specific part of text within a paragraph or other inline content. For example:</p>
+        <pre>
+            &lt;p&gt;This is a &lt;span style="font-weight: bold;"&gt;bold&lt;/span&gt; word in a sentence.&lt;/p&gt;  
+        </pre>
+        <p>In this case, the word "bold" will be displayed in bold font within the paragraph.</p>
+        <p>Using &lt;div&gt; and &lt;span&gt; tags effectively can help organize and style your HTML content, making it easier to read and maintain.</p>
+
     </section>
 
     <section id="formatting-tags">
         <h2>Formatting Tags</h2>
         <p>HTML provides several tags for formatting text, such as:</p>
         <ul>
-            <li><code>&lt;strong&gt;</code> - Makes text bold</li>
-            <li><code>&lt;em&gt;</code> - Makes text italic</li>
-            <li><code>&lt;u&gt;</code> - Underlines text</li>
-            <li><code>&lt;mark&gt;</code> - Highlights text</li>
-            <li><code>&lt;small&gt;</code> - Decreases the text size</li>
-            <li><code>&lt;del&gt;</code> - Displays deleted (strikethrough) text</li>
-            <li><code>&lt;ins&gt;</code> - Displays inserted (underlined) text</li>
-            <li><code>&lt;sub&gt;</code> - Subscript text</li>
-            <li><code>&lt;sup&gt;</code> - Superscript text</li>
-            <li><code>&lt;abbr&gt;</code> - Abbreviation with a tooltip</li>
+            <li>&lt;strong&gt; - Makes text bold</li>
+            <li>&lt;em&gt; - Makes text italic</li>
+            <li>&lt;u&gt; - Underlines text</li>
+            <li>&lt;mark&gt; - Highlights text</li>
+            <li>&lt;small&gt; - Decreases the text size</li>
+            <li>&lt;del&gt; - Displays deleted (strikethrough) text</li>
+            <li>&lt;ins&gt; - Displays inserted (underlined) text</li>
+            <li>&lt;sub&gt; - Subscript text</li>
+            <li>&lt;sup&gt; - Superscript text</li>
+            <li>&lt;abbr&gt; - Abbreviation with a tooltip</li>
         </ul>
         <pre>
             &lt;strong&gt;Bold Text&lt;/strong&gt;<br>
@@ -208,6 +290,14 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
             &lt;/ul&gt;
         </pre>
+        <p>In the above code:</p>
+        <pre>
+            &lt;ul&gt; - Starts an unordered list.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt; - Defines a list item.<br>
+            &lt;/ul&gt; - Ends the unordered list.
+        </pre>
+        <p>Unordered lists are typically displayed with bullet points.</p>
+
         <h3>Ordered List</h3>
         <pre>
             &lt;ol&gt;<br>
@@ -216,6 +306,35 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Third Item&lt;/li&gt;<br>
             &lt;/ol&gt;
         </pre>
+        <p>In the above code:</p>
+        <pre>
+            &lt;ol&gt; - Starts an ordered list.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt; - Defines a list item.<br>
+            &lt;/ol&gt; - Ends the ordered list.
+        </pre>
+        <p>Ordered lists are typically displayed with numbers.</p>
+        <p>Both unordered and ordered lists can be nested within each other to create sublists. For example:</p>
+
+        <pre>
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Sublist:&lt;ul&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Subitem 1&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Subitem 2&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;&lt;/li&gt;<br>
+            &lt;/ul&gt;
+        </pre>
+        <p>In this example, the sublist is nested within the second list item of the main unordered list.</p>
+        <h3>Ordered List with Custom Start</h3>
+        <pre>
+            &lt;ol start="5"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Fifth Item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Sixth Item&lt;/li&gt;<br>
+            &lt;/ol&gt;
+        </pre>
+        <p>In the above code, the <code>start</code> attribute is used to specify that the ordered list should start at item 5 instead of the default 1.</p>
+        
         <h3>Definition Lists</h3>
         <pre>
             &lt;dl&gt;<br>
@@ -224,11 +343,21 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Term 2&lt;/dt&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Definition of Term 2&lt;/dd&gt;<br>
             &lt;/dl&gt;
+        </pre>
+        <p>In the above code:</p>
+        <pre>
+            &lt;dl&gt; - Starts a definition list.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt; - Defines a term.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt; - Defines the description or definition of the term.<br>
+            &lt;/dl&gt; - Ends the definition list.
+        </pre>
+        <p>Definition lists are used to display terms and their definitions, often used in glossaries or dictionaries.</p>
+        <p>Lists are useful for organizing content and making it easier to read. They can be styled using CSS to change their appearance, such as bullet styles, numbering formats, and indentation.</p>
         </section>
 
     <section id="tables">
         <h2>Tables</h2>
-        <p>HTML tables are used to display data in a tabular format. They are created using the <code>&lt;table&gt;</code> tag, along with <code>&lt;tr&gt;</code> for table rows, <code>&lt;th&gt;</code> for table headers, and <code>&lt;td&gt;</code> for table data cells.</p>
+        <p>HTML tables are used to display data in a tabular format. They are created using the "&lt;table&gt;" tag, along with "&lt;tr&gt;" for table rows, "&lt;th&gt;" for table headers, and "&lt;td&gt;" for table data cells.</p>
         <pre>
             &lt;table&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
@@ -248,11 +377,40 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt; - Defines a table header cell.<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; - Defines a table data cell.<br>
             &lt;/table&gt; - Ends the table.
+        </pre>
+        <p>Tables can have multiple rows and columns, and you can use the "&lt;thead&gt;", "&lt;tbody&gt;", and "&lt;tfoot&gt;" tags to group the header, body, and footer sections of the table.</p>
+        <p>For example:</p>
+        <pre>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+            &lt;/tbody&gt;<br>
+            &lt;/table&gt;
+        </pre>
+        <p>In this example, the "&lt;thead&gt;" section contains the table headers, while the "&lt;tbody&gt;" section contains the main data rows.</p>
+        <p>Tables can also have a caption using the "&lt;caption&gt;" tag:</p>
+        <pre>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;caption&gt;Table Caption&lt;/caption&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </pre>
+        <p>In this case, the caption will be displayed above the table, providing a title or description for the table's content.</p>
+        
         </section>
 
     <section id="forms">
         <h2>Forms</h2>
-        <p>HTML forms are used to collect user input. They are created using the <code>&lt;form&gt;</code> tag, along with various input elements such as text fields, checkboxes, radio buttons, and submit buttons.</p>
+        <p>HTML forms are used to collect user input. They are created using the &lt;form&gt; cotent &lt;/form&gt; tag, along with various input elements such as text fields, checkboxes, radio buttons, and submit buttons.</p>
         <pre>
             &lt;form action="/submit" method="post"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
@@ -267,7 +425,81 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;input&gt; - Defines an input field.<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit"&gt; - Defines a submit button.<br>
             &lt;/form&gt; - Ends the form.
-        </section>
+        </pre>
+        <p>The "action" attribute specifies the URL where the form data will be sent when the form is submitted, and the "method" attribute specifies the HTTP method to use (e.g., "get" or "post").</p>
+        <p>Forms can include various input types, such as:</p>
+        <ul>
+            <li>text - Single-line text input</li>
+            <li>password - Password input (hidden characters)</li>
+            <li>email - Email input with validation</li>
+            <li>number - Numeric input with validation</li>
+            <li>checkbox - Checkbox input</li>
+            <li>radio - Radio button input</li>
+            <li>submit - Submit button</li>
+            <li>reset - Reset button to clear form</li>
+            <li>color - Color picker input</li>
+            <li>date - Date selector</li>
+            <li>range - Range slider</li>
+            <li>file - File upload selector</li>
+            <li>search - Search field input</li>
+            <li>tel - Telephone number input</li>
+            <li>url - URL input field</li>
+        </ul>
+        <p>For example, to create a form with a text input and a submit button:</p>
+        <pre>
+            &lt;form action="/submit" method="post"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="username"&gt;Username:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="username" name="username"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+            &lt;/form&gt;
+        </pre>
+        <p>In this example, the form includes a text input for the username and a submit button. When the user fills in the username and clicks the submit button, the form data will be sent to the specified action URL.</p>
+        <p>Forms can also include additional features such as validation, required fields, and more advanced input types. For example, you can use the "required" attribute to make an input field mandatory:</p>
+        <pre>
+            &lt;form action="/submit" method="post"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="email" name="email" required&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+            &lt;/form&gt;
+        </pre>
+        <p>In this case, the email input field is marked as required, meaning the user must fill it out before submitting the form.</p>
+        <p>Forms can also include dropdown menus, text areas, and other input types to collect more complex data. For example:</p>
+        <pre>
+            &lt;form action="/submit" method="post"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="country"&gt;Country:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;select id="country" name="country"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="usa"&gt;USA&lt;/option&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="canada"&gt;Canada&lt;/option&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+            &lt;/form&gt;
+        </pre>
+        <p>In this example, the form includes a dropdown menu for selecting a country, along with a submit button. When the user selects a country and clicks the submit button, the selected value will be sent to the specified action URL.</p>
+        <p>Forms are essential for user interaction on websites, allowing users to submit data, register accounts, search for information, and perform various actions. They can be styled using CSS to improve their appearance and usability.</p>
+        <p>In this action can have two methods </p>
+        <ul>
+            <li>get - Sends form data as URL parameters (visible in the URL).</li>
+            <li>post - Sends form data in the request body (not visible in the URL).</li>
+        </ul>
+        <p>For example, to use the "get" method:</p>
+        <pre>
+            &lt;form action="/search" method="get"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="query"&gt;Search:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="query" name="query"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Search"&gt;<br>
+            &lt;/form&gt;
+        </pre>
+        <p>In this example, when the user submits the form, the search query will be appended to the URL as a query parameter (e.g., "/search?query=your_search_term").</p>
+        <p>Using the "post" method is more secure for sensitive data, as it does not expose the data in the URL. For example:</p>
+        <pre>
+            &lt;form action="/submit" method="post"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="password"&gt;Password:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="password" id="password" name="password"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+            &lt;/form&gt;
+        </pre>
+        <p>In this case, the password will be sent in the request body when the form is submitted, keeping it hidden from the URL.</p>
+         </section>
 
     <section id="input-types">
         <h2>Input Types</h2>
