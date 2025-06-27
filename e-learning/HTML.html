@@ -24,7 +24,6 @@
         <a href="#lists">Lists</a>
         <a href="#tables">Tables</a>
         <a href="#forms">Forms</a>
-        <a href="#input-types">Input Types</a>
         <a href="#html5">HTML 5</a>
     
     </aside>
@@ -429,21 +428,21 @@ Example:
         <p>The "action" attribute specifies the URL where the form data will be sent when the form is submitted, and the "method" attribute specifies the HTTP method to use (e.g., "get" or "post").</p>
         <p>Forms can include various input types, such as:</p>
         <ul>
-            <li>text - Single-line text input</li>
-            <li>password - Password input (hidden characters)</li>
-            <li>email - Email input with validation</li>
-            <li>number - Numeric input with validation</li>
-            <li>checkbox - Checkbox input</li>
-            <li>radio - Radio button input</li>
-            <li>submit - Submit button</li>
-            <li>reset - Reset button to clear form</li>
-            <li>color - Color picker input</li>
-            <li>date - Date selector</li>
-            <li>range - Range slider</li>
-            <li>file - File upload selector</li>
-            <li>search - Search field input</li>
-            <li>tel - Telephone number input</li>
-            <li>url - URL input field</li>
+            <li>text - Single-line text input</li>&lt;input type="text" name="username"&gt;<br>
+            <li>password - Password input (hidden characters)</li>&lt;input type="password" name="password"&gt;<br>
+            <li>email - Email input with validation</li>&lt;input type="email" name="email"&gt;
+            <li>number - Numeric input with validation</li>&lt;input type="number" name="age"&gt;
+            <li>checkbox - Checkbox input</li>&lt;input type="checkbox" name="subscribe"&gt;
+            <li>radio - Radio button input</li>&lt;input type="radio" name="gender" value="male"&gt;Male
+            <li>submit - Submit button</li>&lt;input type="submit" value="Submit"&gt;
+            <li>reset - Reset button to clear form</li>&lt;input type="reset" value="Reset"&gt;
+            <li>color - Color picker input</li>&lt;input type="color" name="favcolor"&gt;
+            <li>date - Date selector</li>&lt;input type="date" name="birthdate"&gt;
+            <li>range - Range slider</li>&lt;input type="range" name="volume" min="0" max="100"&gt;
+            <li>file - File upload selector</li>&lt;input type="file" name="resume"&gt;
+            <li>search - Search field input</li>&lt;input type="search" name="query"&gt;
+            <li>tel - Telephone number input</li>&lt;input type="tel" name="phone"&gt;
+            <li>url - URL input field</li>&lt;input type="url" name="homepage"&gt;
         </ul>
         <p>For example, to create a form with a text input and a submit button:</p>
         <pre>
@@ -499,37 +498,14 @@ Example:
             &lt;/form&gt;
         </pre>
         <p>In this case, the password will be sent in the request body when the form is submitted, keeping it hidden from the URL.</p>
-         </section>
-
-    <section id="input-types">
-        <h2>Input Types</h2>
-        <p>HTML provides various input types for forms, such as:</p>
-        <ul>
-             <li><code>text</code> - Single-line text input</li>&lt;input type="text" name="username"&gt;<br>
-            <li><code>password</code> - Password input (hidden characters)</li>&lt;input type="password" name="password"&gt;<br>
-            <li><code>email</code> - Email input with validation</li>&lt;input type="email" name="email"&gt;<br>
-            <li><code>number</code> - Numeric input with validation</li>&lt;input type="number" name="age"&gt;<br>
-            <li><code>checkbox</code> - Checkbox input</li>&lt;input type="checkbox" name="subscribe"&gt;<br>
-            <li><code>radio</code> - Radio button input</li>&lt;input type="radio" name="gender" value="male"&gt; Male<br>
-            <li><code>submit</code> - Submit button</li> &lt;input type="submit" value="Submit"&gt;<br>
-            <li><code>reset</code> - Reset button to clear form</li>&lt;input type="reset" value="Reset"&gt;<br>
-            <li><code>color</code> - Color picker input</li>&lt;input type="color" name="favcolor"&gt;<br>
-            <li><code>date</code> - Date selector</li>&lt;input type="date" name="birthdate"&gt;<br>
-            <li><code>range</code> - Range slider</li>&lt;input type="range" name="volume" min="0" max="100"&gt;<br>
-            <li><code>file</code> - File upload selector</li>&lt;input type="file" name="resume"&gt;<br>
-            <li><code>search</code> - Search field input</li>&lt;input type="search" name="query"&gt;<br>
-            <li><code>tel</code> - Telephone number input</li>&lt;input type="tel" name="phone"&gt;<br>
-            <li><code>url</code> - URL input field</li>&lt;input type="url" name="homepage"&gt;
-        </ul>
-        
     </section>
 
     <section id="html5">
         <h2>HTML 5</h2>
         <p>HTML5 is the latest version of HTML, which introduces new features and elements for modern web development. Some key features include:</p>
         <ul>
-            <li>New semantic elements like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code>.</li>
-            <li>Support for multimedia elements like <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code>.</li>
+            <li>New semantic elements like &lt;header&gt;,&lt;footer&gt;, &lt;article&gt; and &lt;section&gt;.</li>
+            <li>Support for multimedia elements like &lt;video&gt; and &lt;audio&gt;.</li>
             <li>Improved form controls and input types.</li>
             <li>Canvas element for drawing graphics.</li>
         </ul>
@@ -537,12 +513,13 @@ Example:
         <h2>Semantic Elements</h2>
         <p>Semantic elements provide meaning to the content they contain, making it easier for browsers and search engines to understand the structure of a webpage. Examples include:</p>
         <ul>
-            <li><code>&lt;header&gt;</code> - Represents the header of a document or section.</li>
-            <li><code>&lt;footer&gt;</code> - Represents the footer of a document or section.</li>
-            <li><code>&lt;article&gt;</code> - Represents a self-contained piece of content.</li>
-            <li><code>&lt;section&gt;</code> - Represents a thematic grouping of content.</li>
-            <li><code>&lt;nav&gt;</code> - Represents a navigation section.</li>
-            <li><code>&lt;aside&gt;</code> - Represents content that is tang
+            <li>&lt;header&gt; - Represents the header of a document or section.</li>
+            <li>&lt;footer&gt; - Represents the footer of a document or section.</li>
+            <li>&lt;article&gt; - Represents a self-contained piece of content.</li>
+            <li>&lt;section&gt; - Represents a thematic grouping of content.</li>
+            <li>&lt;nav&gt; - Represents a navigation section.</li>
+            <li>&lt;aside&gt; - Represents content that is tangentially related to the main content.</li>
+            <li>&lt;main&gt; - Represents the main content of a document.</li>
         </ul>
         <h2>Multimedia</h2>
         <p>HTML5 provides native support for multimedia content, allowing developers to embed audio and video directly into web pages without the need for third-party plugins.</p>
@@ -553,7 +530,8 @@ Example:
             &nbsp;&nbsp;&nbsp;&nbsp;Your browser does not support the audio element.<br>
             &lt;/audio&gt;
         </pre>
-        <p>The <code>controls</code> attribute adds playback controls to the audio player</p>
+        <p>The "controls" attribute adds playback controls to the audio player</p>
+        
         <h3>Video</h3>
         <pre>
             &lt;video width="320" height="240" controls&gt;<br>
@@ -561,18 +539,18 @@ Example:
             &nbsp;&nbsp;&nbsp;&nbsp;Your browser does not support the video tag.<br>
             &lt;/video&gt;
         </pre>
-        <p>The <code>width</code> and <code>height</code> attributes specify the dimensions of the video player.</p>
+        <p>The width and height attributes specify the dimensions of the video player.</p>
         <p>Both audio and video elements can include multiple source files to ensure compatibility with different browsers and devices.</p>
         <h3>Iframes</h3>
-        <p>An iframe (inline frame) is used to embed another HTML document within the current document. It is represented by the <code>&lt;iframe&gt;</code> tag.</p>
+        <p>An iframe (inline frame) is used to embed another HTML document within the current document. It is represented by the &lt;iframe&gt; &lt;/iframe&gt; tag.</p>
         <pre>
             &lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;
         </pre>
-        <p>The <code>src</code> attribute specifies the URL of the document to be embedded, while the <code>width</code> and <code>height</code> attributes define the size of the iframe.</p>
+        <p>The src attribute specifies the URL of the document to be embedded, while the width and height attributes define the size of the iframe.</p>
         <p>Using iframes, you can display content from other websites or applications within your own webpage, allowing for a seamless user experience.</p>
          
         <h2>Canvas</h2>
-        <p>The <code>&lt;canvas&gt;</code> element is used to draw graphics on the fly using JavaScript. It provides a space for rendering shapes, images, and animations.</p>
+        <p>The &lt;canvas&gt; &lt;/canvas&gt; element is used to draw graphics on the fly using JavaScript. It provides a space for rendering shapes, images, and animations.</p>
         <pre>
             &lt;canvas id="myCanvas" width="500" height="300"&gt;&lt;/canvas&gt;<br>
             &lt;script&gt;<br>
