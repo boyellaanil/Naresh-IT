@@ -667,29 +667,157 @@
             </ul></p>
         </section>
 
-        <section id="flexbox">
+       <section id="flexbox">
             <h2>Flexbox</h2>
-            <p>Flexbox is a powerful layout system in CSS that allows you to create flexible and responsive layouts. It provides a way to align and distribute space among items in a container, making it easier to design complex layouts without using floats or positioning.</p>
-            <p>Key properties of Flexbox include:</p>
+            <p>Flexbox (Flexible Box) is a powerful one-dimensional layout model in CSS that allows you to efficiently arrange and align elements within a container. It helps distribute space dynamically and handles different screen sizes gracefully without relying on floats or positioning hacks.</p>
+            <p><strong>When to use Flexbox:</strong> Use it when you want to align elements either in a row or column, space them evenly, center them, or create responsive designs.</p>
+            <h3>Basic Example:</h3>
+            <p>Here’s a simple example of a Flexbox container:</p>
+            <pre><code>
+                &lt;style&gt;
+                .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                height: 100px;
+                background-color: #f0f0f0;
+                }
+                .box {
+                width: 80px;
+                height: 80px;
+                background-color: #4CAF50;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+                &lt;/style&gt;
+                &lt;div class="container"&gt;
+                &lt;div class="box"&gt;1&lt;/div&gt;
+                &lt;div class="box"&gt;2&lt;/div&gt;
+                &lt;div class="box"&gt;3&lt;/div&gt;
+                &lt;/div&gt;
+            </code></pre>
+            <p>This will create three green boxes aligned in a row, spaced evenly with centered content inside them.</p>
+            <h3>Key Properties Explained with Examples:</h3>
             <ul>
-                <li><strong>display: flex;</strong> - Enables Flexbox on the container.</li>
-                <li><strong>flex-direction:</strong> - Defines the direction of the flex items (e.g., `row`, `column`).</li>
-                <li><strong>justify-content:</strong> - Aligns items along the main axis (e.g., `flex-start`, `center`, `space-between`).</li>
-                <li><strong>align-items:</strong> - Aligns items along the cross axis (e.g., `stretch`, `center`).</li>
+                <li>
+                    <strong>display: flex;</strong><br>Turns the element into a flex container. All direct children become flex items.
+                </li>
+                <li>
+                    <strong>flex-direction:</strong><br>Specifies the direction of the main axis.
+                    <ul>
+                        <li>row (default): left to right</li>
+                        <li>column : top to bottom</li>
+                    </ul>
+                    <pre><code>flex-direction: column;</code></pre>
+                </li>
+                <li>
+                    <strong>justify-content:</strong><br>Controls alignment along the main axis.
+                    <ul>
+                        <li>flex-start : items align at the start</li>
+                        <li>center : items align in the center</li>
+                        <li>space-between : items evenly distributed with space between</li>
+                        <li>space-around : equal space around all items</li>
+                    </ul>
+                    <pre><code>justify-content: space-between;</code></pre>
+                </li>
+                <li>
+                    <strong>align-items:</strong><br>Controls alignment on the cross axis.
+                    <ul>
+                        <li>stretch (default) : items stretch to fill container</li>
+                        <li>center : items align to the center</li>
+                        <li>flex-start : items align to the top/left</li>
+                    </ul>
+                    <pre><code>align-items: center;</code></pre>
+                </li>
+                <li>
+                    <strong>gap:</strong><br>Adds spacing between flex items.
+                    <pre><code>gap: 20px;</code></pre>
+                </li>
+                <li>
+                    <strong>flex-wrap:</strong><br>Allows items to wrap onto multiple lines if needed.
+                    <pre><code>flex-wrap: wrap;</code></pre>
+                </li>
+                <li>
+                    <strong>align-self:</strong><br>Allows a single item to override <code>align-items</code>.
+                    <pre><code>align-self: flex-end;</code></pre>                    
+                </li>
             </ul>
-            <p>Flexbox is particularly useful for creating responsive designs and aligning elements within a container.</p>
+            <h3>Responsive Design Example:</h3>
+            <pre><code>
+                .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                }
+                .box {
+                flex: 1 1 200px; /* Grow, shrink, basis */
+                height: 100px;
+                background: #2196F3;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+            </code></pre>
+            <p>This layout ensures the boxes adapt to the screen size and wrap when needed.</p>
+            <p>Flexbox is particularly useful for creating <strong>navigation bars</strong>, <strong>grids</strong>, <strong>forms</strong>, and any layout that requires alignment and spacing with minimal CSS.</p>
         </section>
 
         <section id="grid">
             <h2>Grid</h2>
-            <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex grid-based designs. It provides a way to define rows and columns, making it easy to create responsive layouts. Key properties include:</p>
+            <p>CSS Grid Layout is a powerful two-dimensional layout system designed for the web. It enables developers to build complex layouts using rows and columns with precise control over item positioning, spacing, and alignment.Unlike Flexbox, which is one-dimensional (either row or column), Grid works in both dimensions simultaneously.</p>
+            <h3>Key Properties:</h3>
             <ul>
-                <li><strong>display: grid;</strong> - Enables Grid on the container.</li>
-                <li><strong>grid-template-columns:</strong> - Defines the number and size of columns.</li>
-                <li><strong>grid-template-rows:</strong> - Defines the number and size of rows.</li>
-                <li><strong>grid-gap:</strong> - Sets the space between grid items.</li>
+                <li><strong>display: grid;</strong> – Enables Grid layout on the container. Once applied, child elements become grid items.</li>
+                <li><strong>grid-template-columns:</strong> – Defines the number and width of the columns. You can use fixed units (e.g., px), flexible units (e.g., fr), or percentages.</li>
+                <li><strong>grid-template-rows:</strong> – Defines the number and height of the rows similarly.</li>
+                <li><strong>grid-gap (or gap):</strong> – Sets the spacing between grid items (both rows and columns).</li>
             </ul>
-            <p>Grid is particularly useful for creating complex layouts with precise control over positioning and alignment.</p>
+            <h3>Example: Simple 3-Column Grid</h3>
+            <p>Here’s a basic example that creates a layout with 3 equal-width columns and spacing between items:</p>
+            <pre><code>
+                &lt;style&gt;
+                .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+                gap: 20px; /* space between grid items */
+                padding: 10px;
+                }
+                .grid-item {
+                background-color: #4CAF50;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                border-radius: 8px;
+                }
+                &lt;/style&gt;
+                &lt;div class="grid-container"&gt;
+                &lt;div class="grid-item"&gt;Item 1&lt;/div&gt;
+                &lt;div class="grid-item"&gt;Item 2&lt;/div&gt;
+                &lt;div class="grid-item"&gt;Item 3&lt;/div&gt;
+                &lt;div class="grid-item"&gt;Item 4&lt;/div&gt;
+                &lt;div class="grid-item"&gt;Item 5&lt;/div&gt;
+                &lt;div class="grid-item"&gt;Item 6&lt;/div&gt;
+                &lt;/div&gt;
+            </code></pre>
+            <h3>Example: Different Column Widths</h3>
+            <p>We can also create columns of different widths:</p>
+            <pre><code>
+                grid-template-columns: 1fr 2fr 1fr;
+            </code></pre>
+            <p>This makes the middle column twice as wide as the others.</p>
+            <h3>Benefits of CSS Grid</h3>
+            <ul>
+                <li>Easy to create both rows and columns at once.</li>
+                <li>Precise control over layout even for complex designs.</li>
+                <li>Useful for responsive designs with minimal media queries.</li>
+                <li>Combines well with media queries, Flexbox, and modern UI layouts.</li>
+            </ul>
+            <p>CSS Grid is ideal for building modern web page structures like galleries, dashboards, forms, and entire web pages.</p>
         </section>
 
         <section id="transitions">

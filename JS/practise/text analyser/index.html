@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Analyzer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: aqua;
+    }
+    #inputText {
+      width: 400px;
+      height: 50px;
+      font-size: 18px;
+      background-color: blanchedalmond;
+    }
+    button {
+      margin-left: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="inputText" placeholder="Enter your text here" />
+  <button onclick="analyzeText()">Click</button>
+  <div class="output">
+    <p>no. of characters: <span id="charCount"></span></p>
+    <p>vowels: <span id="vowelCount"></span></p>
+    <p>consonants: <span id="consonantCount"></span></p>
+    <p>spaces: <span id="spaceCount"></span></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
