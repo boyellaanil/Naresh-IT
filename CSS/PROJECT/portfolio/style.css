@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #8e61cc;
+  background-color: #90f700;
   color: #2c3e50;
   line-height: 1.6;
   animation: fadeInBody 1.2s ease;
@@ -44,7 +44,7 @@ header {
 
 .logo p {
   font-size: 25px;
-  color: rgb(184, 72, 204);
+  color: rgb(43, 0, 255);
   font-weight: 600;
   animation: fadeUp 1.2s ease;
 }
@@ -330,7 +330,7 @@ footer {
 
   .menu {
     display: none;
-    flex-direction: column;
+    flex-direction:column;
     width: 100%;
     background-color: #1e90ff;
     padding: 10px;
