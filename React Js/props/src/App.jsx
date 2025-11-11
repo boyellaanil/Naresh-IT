@@ -5,6 +5,7 @@ import FunctionProp from './FunctionProp';
 import DetailsData from './DetailsData';
 import Counter from './Counter';
 import DefaultProps from './DefaultProps';
+import Parent from './Parent';
 
 const App =()=>{
   let [count,setCount]=React.useState(0);
@@ -36,15 +37,15 @@ const App =()=>{
     return (
       <div>
        
-        <FunctionProp userName="Arafath" age={30}/>
-        <DetailsData userDetails={details}/>
-        <DetailsData employeesData={employDetails} /> 
+        {/* <FunctionProp userName="Arafath" age={30}/> */}
+        {/* <DetailsData userDetails={details}/> */}
+        {/* <DetailsData employeesData={employDetails} />  */}
         {/* <Counter count={count} inc={inc} dec={dec} /> */}
         {/* <Counter countData={{ count, inc, dec }} /> */}
-        <DefaultProps userName="Ravi" />
+        {/* <DefaultProps userName="Ravi" />
         <DefaultProps />
-        <DefaultProps userName = "Priya" /> 
-        
+        <DefaultProps userName = "Priya" />  */}
+        <Parent userName="Anil"/>
       </div>
     );
   };
