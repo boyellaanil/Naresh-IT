@@ -4,12 +4,15 @@ import PageNotFound from './PageNotFound'
 
 const App = () => {
  let [display, setDisplay] = useState("kumari");
+
+        // if-else condition
   //   if (display) {
   //     return <h1>I am a App Component</h1>;
   //   } else {
   //     return <h1>Data Not Found</h1>;
   //   }
 
+        // Ternary Operator
   //   return (
   //     <>
   //       <PageNotFound />
@@ -17,16 +20,20 @@ const App = () => {
   //     </>
   //   );
 
+
+        //if-else with Components
   //   if (display) {
   //     return <DisplayData />;
   //   } else {
   //     return <PageNotFound />;
   //   }
 
+        // Ternary Operator with Components
   //   return <section> {display ? <DisplayData /> : <PageNotFound />}</section>;
-
+        // short circuit Operator
   //   return <section>{display && <DisplayData />}</section>;
 
+        // Switch Case
   //   let score = 90;
 
   //   switch (true) {
@@ -50,6 +57,7 @@ const App = () => {
   //       console.log("Fail");
   //     }
   //   }
+
 
   switch (display) {
     case "ravi": {

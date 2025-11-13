@@ -1,5 +1,4 @@
 import React from "react";
-// import "./global.css";
 import Style from "./Child.module.css";
 
 const Child1 = () => {
