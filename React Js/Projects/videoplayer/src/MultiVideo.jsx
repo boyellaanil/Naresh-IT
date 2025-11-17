@@ -1,6 +1,6 @@
 import React from "react";
 
-const MultiVideo = ({ videos, videoRef, mouseEnter, mouseLeave }) => {
+const MultiVideo = ({ videos, videoRef, mouseEnter, mouseLeave,setVideo }) => {
   return (
     <>
       {videos.map((video, index) => {
@@ -10,9 +10,10 @@ const MultiVideo = ({ videos, videoRef, mouseEnter, mouseLeave }) => {
             ref={(id) => (videoRef.current[index] = id)}
             onMouseEnter={() => mouseEnter(index)}
             onMouseLeave={() => mouseLeave(index)}
+            onClick={()=>setVideo(video)}
             muted
-            width="150px"
-            height="200px"
+            width="100%"
+            height=""
           ></video>
         );
       })}
