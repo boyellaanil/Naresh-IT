@@ -1,36 +1,16 @@
 import React from "react";
 
-const Registration = ({switchToLogin}) => {
+const Registration = ({handleSubmit,user,pass,switchToLogin}) => {
   return (
     <div>
-      <form action="">
-        <article>
-          <label htmlFor="">FirstName</label>
-          <input type="text" />
-        </article>
-        <article>
-          <label htmlFor="">LastName</label>
-          <input type="text" />
-        </article>
+      <form action=""onSubmit={handleSubmit}>
         <article>
           <label htmlFor="">UserName</label>
-          <input type="text" />
-        </article>
-        <article>
-          <label htmlFor="">Age</label>
-          <input type="number" />
-        </article>
-        <article>
-          <label htmlFor="">Phone</label>
-          <input type="number" />
-        </article>
-        <article>
-          <label htmlFor="">Email</label>
-          <input type="text" />
+          <input type="text" ref={user}/>
         </article>
         <article>
           <label htmlFor="">Password</label>
-          <input type="text" />
+          <input type="password" ref={pass} />
         </article>
         <button type="submit">Register</button>
         <p>Already have an account?</p>

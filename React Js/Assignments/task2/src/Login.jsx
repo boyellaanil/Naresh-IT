@@ -1,20 +1,20 @@
 import React from "react";
 
-const Login = ({switchToRegister}) => {
+const Login = ({handleSubmit,user,pass,switchToRegister}) => {
   return (
     <div>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <article>
           <label htmlFor="">UserName</label>
-          <input type="text" />
+          <input type="text" ref={user}/>
         </article>
         <article>
           <label htmlFor="">Password</label>
-          <input type="password" />
+          <input type="password" ref={pass}/>
         </article>
         <button type="submit">Login</button>
         <p>Don't you have account?</p>
-         <span onClick={switchToRegister}>Register</span>
+        <a href=""onClick={switchToRegister}>Register</a>
       </form>
     </div>
   );
