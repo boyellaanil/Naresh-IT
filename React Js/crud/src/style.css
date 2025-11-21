@@ -1,0 +1,102 @@
+/* ----- GLOBAL STYLE ----- */
+body {
+  font-family: Arial, sans-serif;
+  background: #83d432;
+  padding: 20px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+/* ----- CONTAINER LAYOUT ----- */
+.parent-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* ----- FORM STYLE ----- */
+form {
+  background: #d56868;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgb(43, 4, 239);
+}
+
+form aside {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+  
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* ----- DISPLAY DATA ----- */
+.display-box {
+  background: #ffffff;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.display-box article {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background: #fafafa;
+}
+
+.display-box p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.display-box aside button {
+  margin-right: 10px;
+  background: #28a745;
+}
+
+.display-box aside button:last-child {
+  background: #dc3545;
+}
+
+.display-box aside button:hover {
+  opacity: 0.9;
+}
