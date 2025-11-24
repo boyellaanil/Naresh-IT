@@ -6,7 +6,7 @@ const Child1 = ({message}) => {
     <div>
         <Child2 message={message}/>
     </div>
-  )
-}
+  );
+};
 
 export default Child1
