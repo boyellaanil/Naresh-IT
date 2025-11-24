@@ -1,5 +1,5 @@
 import React from "react";
-import Parent2Child from "./Parent2Child";
+import Parent2Child from "../secondpart/Parent2Child";
 
 const Parent2 = () => {
   return (

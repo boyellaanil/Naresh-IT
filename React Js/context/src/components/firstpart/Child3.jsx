@@ -1,8 +1,8 @@
 import React,{useContext} from 'react'
-import { MessageContext } from '../context/MessageContext'
+import { messageContext } from '../context/MessageContext'
 
 const Child3 = ({message}) => {
-    let data=useContext(MessageContext);
+    let data=useContext(messageContext);
   return (
     <div>
         {message}
