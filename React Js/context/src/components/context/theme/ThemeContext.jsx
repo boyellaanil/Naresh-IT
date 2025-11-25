@@ -21,7 +21,7 @@ let ThemeProvider = ({ children }) => {
     setTheme(!theme);
   };
   return (
-    <themeContext.Provider value={{ dark, light, toggleTheme }}>
+    <themeContext.Provider value={{ theme,dark, light, toggleTheme }}>
       {children}
     </themeContext.Provider>
   );
