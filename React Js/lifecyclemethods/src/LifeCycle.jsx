@@ -21,16 +21,33 @@ export default class LifeCycle extends Component {
         };
         return null;
     };
+    shouldComponentUpdate(){
+      return true;
+    };
+    // componentDidUpdate(prevState){
+    //   if(prevState.count!=this.state.count){
+    //     console.log("the state is updated")
+    //   }
+    // };
 
+    componentDidUpdate(prevProps){
+      if(prevProps.count!=this.props.count){
+        console.log("component did update")
+      }
+    }
     componentDidMount(){
         console.log(" i am a component did mount");
     };
+    componentWillUnmount(){
+      console.log("component will unmount is triggered")
+    }
   render() {
     console.log("i am a render method");
     return (
       <div>
-        <h1>{this.state.count}</h1>
-        <button onClick={this.inc}>inc</button>
+        <h1>{this.props.count}</h1>
+        <h2>Hello{this.state.name}</h2>
+        <button onClick={this.props.inc}>inc</button>
       </div>
     );
   };
