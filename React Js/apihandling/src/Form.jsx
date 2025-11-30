@@ -1,23 +1,6 @@
 import React, { useState } from "react";
 
-const Form = ({ addUser }) => {
-  let [details, setDetails] = useState({
-    name: "",
-  });
-  let { name } = details;
-  let handleChange = (e) => {
-    let { name, value } = e.target;
-    setDetails({ ...details, [name]: value });
-  };
-  let handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(details);
-    addUser(details);
-    setDetails({
-      name: "",
-    });
-  };
-
+const Form = ({ name, handleChange, handleSubmit }) => {
   return (
     <div>
       <form action="" onSubmit={handleSubmit}>
