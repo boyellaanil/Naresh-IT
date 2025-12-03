@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "uname": "anil",
+      "pword": "12345"
+    },
+    {
+      "id": "eddb",
+      "uname": "admin",
+      "pword": "ghjnbhf"
+    },
+    {
+      "id": "3204",
+      "uname": "",
+      "pword": ""
+    },
+    {
+      "id": "8001",
+      "uname": "",
+      "pword": ""
+    }
+  ]
+}
