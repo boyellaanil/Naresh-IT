@@ -1,17 +1,37 @@
-import React from 'react'
+import React, { useContext, useState } from "react";
+import { userContext } from "./context/UserProvider";
 
-const Form = ({uname,pword,handleChange,handleSubmit}) => {
+const From = () => {
+  let { addUser, singleUser, editData } = useContext(userContext);
+  let [details, setDetails] = useState({
+    name: singleUser.name || "",
+  });
+
+  let handleChange = (e) => {
+    let { name, value } = e.target;
+    setDetails({ [name]: value });
+  };
+
+  let handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(details);
+    singleUser.name ? editData(details) : addUser(details);
+    setDetails({ name: "" });
+  };
   return (
     <div>
-        <form action=""onSubmit={handleSubmit}>
-            <label htmlFor="">username</label>
-            <input type="text" name="uname" value={uname} onChange={handleChange} />
-            <label htmlFor="">Password</label>
-            <input type="password" name="pword" value={pword} onChange={handleChange}/>
-            <button>Register</button>
-        </form>
+      <form action="" onSubmit={handleSubmit}>
+        <label htmlFor="">Name</label>
+        <input
+          type="text"
+          name="name"
+          value={details.name}
+          onChange={handleChange}
+        />
+        <button>Submit</button>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default Form
+export default From;
