@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "./Form";
-export default class DisplayData extends Component {
+
+export default class DispalyData extends Component {
   constructor() {
     super();
     this.state = {
@@ -12,7 +13,7 @@ export default class DisplayData extends Component {
     };
   }
 
-  // ! creating the user
+  // ! Creating the user
   addUser = async (userData) => {
     await fetch("http://localhost:3000/users", {
       method: "POST",
@@ -35,26 +36,25 @@ export default class DisplayData extends Component {
     }
   };
 
-  // ! toggle the state
+  // ! Toggle the state
   handleTrue = () => {
     this.setState({ loading: !this.state.loading });
   };
 
-  // ! delete the data
+  // ! Delete the data
   handleDelete = async (id) => {
     await fetch(`http://localhost:3000/users/${id}`, {
       method: "DELETE",
     });
     this.handleTrue();
   };
-
-  // ! API calling
+  // ! Api calling
   componentDidMount() {
     this.users();
   }
 
   // ! Api calling when condition is satisfied
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevPros, prevState) {
     if (prevState.loading !== this.state.loading) {
       this.users();
     }
@@ -114,7 +114,6 @@ export default class DisplayData extends Component {
                     this.handleDelete(user.id);
                   }}
                 >
-                  {" "}
                   Delete
                 </button>
               </article>
