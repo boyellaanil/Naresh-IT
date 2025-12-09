@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Form,Outlet,Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import COntact from './components/COntact'
 import About from './components/About'
@@ -8,10 +8,11 @@ import Men from './components/products/Men'
 import Women from './components/products/Women'
 import Kids from './components/products/Kids'
 import Navbar from'./components/navbar/Navbar'
+import FormData from './components/Form'
 const App = () => {
   return (
     <div>
-        <Navbar/>
+        {/* <Navbar/>
         <Routes>
             <Route path="/home"element={<Home/>}></Route>
             <Route path="/contact"element={<COntact/>}></Route>
@@ -22,7 +23,9 @@ const App = () => {
                 <Route path="women"element={<Women/>}></Route>
                 <Route path="kids"element={<Kids/>}></Route>
             </Route>
-        </Routes>
+        </Routes> */}
+         <FormData />
+      <Outlet />
     </div>
   )
 }
