@@ -13,8 +13,9 @@ let UserProvider = ({ children }) => {
   console.log(userDetails);
 
   let addUser = async (data) => {
-    await axios.post("http://localhost:3000/users", data);
-  };
+  await axios.post("http://localhost:3000/users", data);
+  fetchUser(); // refresh UI
+};
 
   let fetchUser = async () => {
     let { data } = await axios.get("http://localhost:3000/users");
@@ -33,8 +34,9 @@ let UserProvider = ({ children }) => {
   };
 
   let editData = async (data) => {
-    await axios.put(`http://localhost:3000/users/${singleUser.id}`, data);
-  };
+  await axios.put(`http://localhost:3000/users/${singleUser.id}`, data);
+  fetchUser(); // refresh UI
+};
   return (
     <userContext.Provider
       value={{

@@ -1,11 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState,useEffect } from "react";
 import { userContext } from "./context/UserProvider";
 
-const From = () => {
+const Form = () => {
   let { addUser, singleUser, editData } = useContext(userContext);
   let [details, setDetails] = useState({
     name: singleUser.name || "",
   });
+
+  useEffect(() => {
+  setDetails({ name: singleUser.name || "" });
+}, [singleUser]);
 
   let handleChange = (e) => {
     let { name, value } = e.target;
@@ -34,4 +38,4 @@ const From = () => {
   );
 };
 
-export default From;
+export default Form;

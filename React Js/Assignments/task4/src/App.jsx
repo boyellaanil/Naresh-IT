@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/Navbar";
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
-import From from "./components/From";
+import Form from "./components/Form";
 import DisplayData from "./components/DisplayData";
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
     <div>
       <Navbar />
       <Switch>
-        <Route path="/form" component={From}></Route>
+        <Route path="/form" component={Form}></Route>
         <Route path="/display" component={DisplayData}></Route>
       </Switch>
     </div>
