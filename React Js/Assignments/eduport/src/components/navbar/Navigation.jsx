@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import CreateNavbar from './CreateNavbar'
 
 const Navigation = () => {
   let navData=[{
@@ -26,13 +27,7 @@ const Navigation = () => {
   return (
     <div>
       <section>
-        <ul>{navData.map((value)=>{
-          return(
-            <li>
-              <p>{value.name}</p>
-            </li>
-          )
-        })}</ul>
+        <CreateNavbar data={navData}/>
       </section>
     </div>
   )
