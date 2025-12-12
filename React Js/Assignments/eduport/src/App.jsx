@@ -5,9 +5,7 @@ import { Outlet } from 'react-router-dom';
 const App = () => {
   return (
     <div>
-      <nav>
         <NavbarContainer/> 
-      </nav>
       <section>
         <Outlet/>
       </section>

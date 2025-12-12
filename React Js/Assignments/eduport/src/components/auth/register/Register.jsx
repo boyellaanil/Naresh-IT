@@ -1,8 +1,12 @@
 import React from 'react'
+import CreateForm from '../../form/CreateForm'
 
 const Register = () => {
+  let registerData=["Name","Email","Dob","Password","Confirm Password","Contact","Gender","Address"]
   return (
-    <div>Register</div>
+    <div>
+      <CreateForm data={registerData}/>
+    </div>
   )
 }
 

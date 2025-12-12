@@ -9,19 +9,19 @@ const Navigation = () => {
   },
   {
     name:"Courses",
-    path:"#"
+    path:"/displayCourse"
   },
   {
     name:"Trainers",
-    path:"#"
+    path:"/displayTrainers"
   },
   {
     name:"Add Course",
-    path:"#"
+    path:"/createCourse"
   },
   {
     name:"Add Trainer",
-    path:"#"
+    path:"/createTrainer"
   },
 ]
   return (

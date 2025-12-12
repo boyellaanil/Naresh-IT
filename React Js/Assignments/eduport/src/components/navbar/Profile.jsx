@@ -8,13 +8,21 @@ const Profile = () => {
   },
   {
     name:"Log in",
+    path:"/login"
+  },
+  {
+    name:"sign in",
+    path:"/register"
+  },
+  {
+    name:"Logout",
     path:"#"
   },
 ]
   return (
     <div>
       <section>
-        <CreateNavbar />
+        <CreateNavbar data={profileData} />
       </section>
     </div>
   )

@@ -1,8 +1,12 @@
 import React from 'react'
+import CreateForm from '../../form/CreateForm'
 
 const Login = () => {
+  let loginData=["Username","Password"]
   return (
-    <div>Login</div>
+    <div>
+      <CreateForm data={loginData}/>
+    </div>
   )
 }
 
