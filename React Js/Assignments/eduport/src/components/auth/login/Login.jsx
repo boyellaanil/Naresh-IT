@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import CreateForm from "../../form/CreateForm";
 
 
@@ -7,18 +7,28 @@ const Login = () => {
     email: "",
     password: "",
   });
+  let navigate=useNavigate();
+  let {fetchUsers,validate,isLogin}=useContext(authContext); 
   let { email, password } = loginDetails;
   let loginData = [
-    { namme: "email", stateValue: email },
+    { name: "email", stateValue: email },
     { name: "password", stateValue: password },
   ];
   let handleChange = (e) => {
     let { name, value } = e.target;
     setLoginDetails({ ...loginDetails, [name]: value });
   };
+  useEffect(()=>{
+    fetchUsers();
+  },[]);
+
+  let handleSubmit=()=>{
+    validate(email,password); 
+    isLogin && navigate("/displayCourses");
+  }
   return (
     <div>
-      <CreateForm data={loginData} handleChange={handleChange} />
+      <CreateForm data={loginData} handleChange={handleChange} handleSubmit={handleSubmit}/>
     </div>
   );
 };

@@ -1,3 +1,14 @@
 {
-    "users": []
+  "users": [
+    {
+      "id": "438e",
+      "name": "",
+      "email": "",
+      "dob": "",
+      "password": "",
+      "contact": "",
+      "gender": "",
+      "address": ""
+    }
+  ]
 }

@@ -14,7 +14,7 @@ const Register = () => {
   });
   let {name,email,dob,password,contact,gender,address}=registerDetails;
 
-  let {addUser}=useContext(authContext);
+  let {adduser}=useContext(authContext);
   let registerData=[
     {name:"name",stateValue:name,type:"text"},
     {name:"email",stateValue:email,type:"email"},
@@ -30,9 +30,19 @@ const Register = () => {
   }
   let handleSubmit=(e)=>{
     e.preventDefault();
-     addUser(registerDetails);
+     adduser(registerDetails);
      alert("Registration Successful");
-  }
+     setRegisterDetails(
+      {
+    name:"",
+    email:"",
+    dob:"",
+    password:"",
+    contact:"",
+    gender:"",
+    address:"",
+  });
+  };
   return (
     <div>
       <CreateForm data={registerData} handleChange={handleChange}handleSubmit={handleSubmit}/>
