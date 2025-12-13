@@ -9,6 +9,34 @@
       "contact": "",
       "gender": "",
       "address": ""
+    },
+    {
+      "id": "489d",
+      "name": "Boyella Anil",
+      "email": "boyellaanil924@gmail.com",
+      "dob": "29/11/2003",
+      "password": "123456",
+      "contact": "6305466142",
+      "gender": "male",
+      "address": "G+3 AP TIDCO apartments 3rd Line, Block B9, S2 Flat"
+    }
+  ],
+  "courses": [
+    {
+      "id": "b891",
+      "courseName": "java full stack",
+      "price": "20000",
+      "duration": "6",
+      "technology": "java,web technologies,....",
+      "trainerName": "venkatesh manasani"
+    },
+    {
+      "id": "6d70",
+      "courseName": "python full stack",
+      "price": "25000",
+      "duration": "6",
+      "technology": "python,django,sql....",
+      "trainerName": "ravi"
     }
   ]
 }
