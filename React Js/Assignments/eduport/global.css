@@ -6,3 +6,6 @@
 .active-link{
     color:blue;
 }
+label{
+    text-transform: capitalize;
+}

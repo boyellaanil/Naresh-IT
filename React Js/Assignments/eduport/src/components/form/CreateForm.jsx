@@ -1,18 +1,19 @@
 import React from "react";
 
-const CreateForm = ({data,handleChange}) => {
+const CreateForm = ({data,handleChange,handleSubmit}) => {
   
   return (
     <div>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         {data.map((value) => {
           return (
-            <aside>
+            <aside key={value.name}>
               <label htmlFor="">{value.name}</label>
               <input type="text" placeholder={`Enter your ${value.name}`} 
-              value={value.name} 
+              value={value.stateValue} 
               onChange={handleChange}
-              name={value.name}/>
+              name={`${value.name}`}
+              />
             </aside>
           );
         })}

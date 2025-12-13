@@ -9,8 +9,8 @@ const Login = () => {
   });
   let { email, password } = loginDetails;
   let loginData = [
-    { namme: "username", stateValue: email },
-    { name: "Password", stateValue: password },
+    { namme: "email", stateValue: email },
+    { name: "password", stateValue: password },
   ];
   let handleChange = (e) => {
     let { name, value } = e.target;
