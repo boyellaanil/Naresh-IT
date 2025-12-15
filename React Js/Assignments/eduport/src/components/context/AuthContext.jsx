@@ -17,17 +17,19 @@ let  AuthProvider=({children})=>{
         let {data}= await axios.get("http://localhost:3000/users");
         setUsersdata({...usersdata,users:data});
     };
+    let userId=sessionStorage.getItem("id");
     let validate=(email,password)=>{
         let data=users.find((value)=>value.email===email && value.password===password);
         if(data){
             alert("Login Successful");
-            setUsersdata({...usersdata,isLogin:true})
+            setUsersdata({...usersdata,isLogin:true});
+            sessionStorage.setItem("id",data.id);
         }
         else{
             alert("Invalid Credentials");
         }
     }
-    return <authContext.Provider value={{ adduser,fetchUsers,validate,isLogin }}>{children}</authContext.Provider>
+    return <authContext.Provider value={{ adduser,fetchUsers,validate,isLogin,userId }}>{children}</authContext.Provider>
 }
 
 export default AuthProvider;
