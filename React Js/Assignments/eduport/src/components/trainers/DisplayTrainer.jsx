@@ -11,10 +11,10 @@ const DisplayTrainer = () => {
   let navigate=useNavigate();
   return (
     <div>
-      {trainersData.map((value)=>{
+      {trainersData?.map((value)=>{
         return (
           <article>
-            <p>TrainerName :{value.name}</p>
+            <p>TrainerName :{value.trainerName}</p>
             <p>Technology : {value.technologies}</p>
             <button onClick={()=>{
               navigate(`/singleTainer/${value.id}`)

@@ -6,7 +6,7 @@ export let trainerContext = createContext();
 let TrainerProvider = ({ children }) => {
   let [trainers, setTrainers] = useState({
     trainersData: [],
-    singleTariner: "",
+    singleTariner: {},
   });
 
   let { trainersData, singleTrainer } = trainers;
@@ -25,6 +25,10 @@ let TrainerProvider = ({ children }) => {
       console.log(err);
     }
   };
-  return <trainerContext.Provider value={{fetchTrainerData,addTrainer,trainersData,singleTrainer}}> {children}</trainerContext.Provider>;
+  let fetchSingleTrainer=(id)=>{
+    let singleTrainerData= trainersData.find((value)=>value.id===id);
+    setTrainers({...trainersData,singleTrainer:singleTrainerData});
+  }
+  return <trainerContext.Provider value={{fetchTrainerData,addTrainer,trainersData,singleTrainer,fetchSingleTrainer}}> {children}</trainerContext.Provider>;
 };
 export default TrainerProvider

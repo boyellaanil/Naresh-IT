@@ -3,18 +3,18 @@ import { trainerContext } from './../context/TrainerContext';
 import CreateForm from './../form/CreateForm';
 const CreateTrainer = () => {
   let [trainerDetails, setTrainerDetails] = useState({
-    name: "",
+    trainerName: "",
     experience: "",
     technologies: "",
     email: "",
     contact: "",
   });
-  let { name, experience, technologies, email, contact } = trainerDetails;
+  let { trainerName, experience, technologies, email, contact } = trainerDetails;
   let {addTrainer}=useContext(trainerContext)
   let trainerData = [
     {
-      name: "name",
-      stateValue: name,
+      name: "trainerName",
+      stateValue: trainerName,
       type: "text",
     },
     {
