@@ -1,7 +1,8 @@
 import { isAuth } from "./auth"
 
 export let protectedRoutes=()=>{
-    if(!isAuth){
-        return redirect;
+    if(!isAuth()){
+        return redirect("/login");
     }
+    return null;
 };
