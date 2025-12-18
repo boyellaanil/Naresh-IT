@@ -24,6 +24,7 @@ let  AuthProvider=({children})=>{
             alert("Login Successful");
             setUsersdata({...usersdata,isLogin:true});
             sessionStorage.setItem("id",data.id);
+             sessionStorage.setItem("role",data.role);
         }
         else{
             alert("Invalid Credentials");

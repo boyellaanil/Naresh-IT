@@ -11,6 +11,7 @@ const Register = () => {
     contact:"",
     gender:"",
     address:"",
+    role:"user",
   });
   let {name,email,dob,password,contact,gender,address}=registerDetails;
 

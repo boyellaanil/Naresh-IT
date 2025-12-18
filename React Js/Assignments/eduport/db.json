@@ -8,7 +8,8 @@
       "password": "",
       "contact": "",
       "gender": "",
-      "address": ""
+      "address": "",
+      "role":"user"
     },
     {
       "id": "489d",
@@ -18,7 +19,8 @@
       "password": "123456",
       "contact": "6305466142",
       "gender": "male",
-      "address": "G+3 AP TIDCO apartments 3rd Line, Block B9, S2 Flat"
+      "address": "G+3 AP TIDCO apartments 3rd Line, Block B9, S2 Flat",
+      "role":"admin"
     }
   ],
   "courses": [
