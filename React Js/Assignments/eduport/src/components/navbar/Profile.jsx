@@ -6,10 +6,9 @@ import { authContext } from "../context/AuthContext";
 const Profile = () => {
   let navigate=useNavigate();
   let [data, setData] = useState({
-    profile:"",
-    
+    profile:[],
   });
-  let {userId}=useContext("authContext");
+  let {userId}=useContext(authContext);
   let {profile}=data;
   let profileData = [
     {
@@ -45,10 +44,13 @@ const Profile = () => {
   useEffect(() => {
     profileDataSetting();
   }, [userId]);
+
   let removeId=()=>{
     sessionStorage.removeItem("id");
+    sessionStorage.removeItem("role");
     navigate("/login");
   };
+  console.log(userId);
   return (
     <div>
       <section>

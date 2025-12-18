@@ -1,42 +1,57 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import CreateNavbar from './CreateNavbar'
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import CreateNavbar from "./CreateNavbar";
+import { authContext } from "../context/AuthContext";
 
 const Navigation = () => {
-  let navData=[{
-    name:"Home",
-    path:"#"
-  },
-  {
-    name:"Courses",
-    path:"/displayCourse"
-  },
-  {
-    name:"Trainers",
-    path:"/displayTrainers"
-  },
-  {
-    name:"Add Course",
-    path:"/createCourse"
-  },
-  {
-    name:"Add Trainer",
-    path:"/createTrainer"
-  },
-]
+  let { role } = useContext(authContext);
+  let navData = [
+    {
+      name: "Home",
+      path: "#",
+    },
+    {
+      name: "Courses",
+      path: "/displayCourse",
+    },
+    {
+      name: "Trainers",
+      path: "/displayTrainers",
+    },
+    {
+      name: "Add Course",
+      path: "/createCourse",
+    },
+    {
+      name: "Add Trainer",
+      path: "/createTrainer",
+    },
+  ];
+  let navData1 = [
+    {
+      name: "Home",
+      path: "#",
+    },
+    {
+      name: "Courses",
+      path: "/displayCourse",
+    },
+    {
+      name: "Trainers",
+      path: "/displayTrainers",
+    },
+  ];
   return (
     <div>
       <section>
-        <CreateNavbar data={navData}/>
+        {role === "admin" ? (
+          <CreateNavbar data={navData} />
+        ) : (
+          <CreateNavbar data={navData1} />
+        )}
       </section>
     </div>
-  )
-}
+  );
+};
 
 export default Navigation;
-
-
-
-
-
-authcontext,navigation,profile

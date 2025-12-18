@@ -11,13 +11,14 @@ let  AuthProvider=({children})=>{
     });
     let {users,singleUser,isLogin}=usersdata;
     let adduser= async(data)=>{
-        await axios.post("http://localhost:3000/users",data)
+        await axios.post("http://localhost:3000/users",data);
     };
     let fetchUsers= async()=>{
         let {data}= await axios.get("http://localhost:3000/users");
         setUsersdata({...usersdata,users:data});
     };
     let userId=sessionStorage.getItem("id");
+     let role=sessionStorage.getItem("role");
     let validate=(email,password)=>{
         let data=users.find((value)=>value.email===email && value.password===password);
         if(data){
@@ -30,7 +31,7 @@ let  AuthProvider=({children})=>{
             alert("Invalid Credentials");
         }
     }
-    return <authContext.Provider value={{ adduser,fetchUsers,validate,isLogin,userId }}>{children}</authContext.Provider>
+    return <authContext.Provider value={{ adduser,fetchUsers,validate,isLogin,userId,role }}>{children}</authContext.Provider>
 }
 
 export default AuthProvider;
