@@ -15,7 +15,8 @@ const Complaint = () => {
   let singleComplaint = useSelector((state) => state.complaint.singleComplaint);
   let dispatch = useDispatch();
   let handleChange = (e) => {
-    setComplaintData({ ...complaintData, complaintValue: e.target.value });
+    let { name, value } = e.target;
+    setComplaintData({ ...complaintData, [name]: value });
   };
   let handleSubmit = (e) => {
     e.preventDefault();
@@ -39,7 +40,7 @@ const Complaint = () => {
         <label htmlFor="">Complaint</label>
         <input
           type="text"
-          value={singleComplaint.complaintValue || complaintData.complaintValue}
+          value={complaintData.complaintValue}
           onChange={handleChange}
           name="complaintValue"
         />
