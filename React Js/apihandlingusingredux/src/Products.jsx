@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { fetchProducts } from "./redux/productSlice";
 import { useDispatch, useSelector } from "react-redux";
-
 const Products = () => {
   let value = useSelector((state) => state.product.products);
   console.log(value);
