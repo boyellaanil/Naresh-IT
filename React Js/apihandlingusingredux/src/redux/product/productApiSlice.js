@@ -3,7 +3,7 @@ import { addProduct, fetchProducts } from "./productThunkApi";
 
 let productSlice=createSlice({
     name:"productSlice",
-    initialState:{productsList :[],singleProduct:""},
+    initialState:{productsList :[],singleProduct:"",error:"  ",pending:false },
     reducers:[],
     extraReducers:(builder)=>{
         builder
@@ -11,7 +11,15 @@ let productSlice=createSlice({
             state.productsList=action.payload
         })
         .addCase(addProduct.fulfilled,(state,action)=>{
-            state.productsList.push(action.payload);
+           state.productsList.push(action.payload.data);
         })
-    }
-})
+        .addCase(addProduct.rejected,(state,action)=>{
+            state.error=action.payload;
+        })
+        .addCase(addProduct.pending,(state,action)=>{
+            state.pending=true;
+        });
+    },
+});
+
+export default productSlice.reducer;
