@@ -15,7 +15,7 @@ const ApiDataDisplaying = () => {
   let errorMessage = useSelector((state) => state.productApiStore.error);
   let pendingMessage = useSelector((state) => state.productApiStore.pending);
   let productData = useSelector((state) => state.productApiStore.productsList);
-  console.log(productsData);
+  console.log(productData);
   let handleChange = (e) => {
     let { name, value } = e.target;
     setProductDetails({ ...productDetails, [name]: value });

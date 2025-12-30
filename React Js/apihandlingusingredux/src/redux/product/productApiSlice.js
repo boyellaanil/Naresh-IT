@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addProduct, fetchProducts } from "./productThunkApi";
+import { addProduct, editProductData, fetchProducts } from "./productThunkApi";
 
 let productSlice=createSlice({
     name:"productSlice",
@@ -13,11 +13,8 @@ let productSlice=createSlice({
         .addCase(addProduct.fulfilled,(state,action)=>{
            state.productsList.push(action.payload.data);
         })
-        .addCase(addProduct.rejected,(state,action)=>{
-            state.error=action.payload;
-        })
-        .addCase(addProduct.pending,(state,action)=>{
-            state.pending=true;
+        .addCase(editProductData.fulfilled,(state,action)=>{
+            let indexValue=state.productsList.findIndex((value)=>value.id===action.payload.data.id);
         });
     },
 });
