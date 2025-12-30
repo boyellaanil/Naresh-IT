@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { addProduct } from "../redux/product/productThunkApi";
+import {
+  addProduct,
+  deleteProductData,
+  editProductData,
+} from "../redux/product/productThunkApi";
 import { useDispatch, useSelector } from "react-redux";
+import { updateSingleProduct } from "../redux/product/productApiSlice";
 
 const ApiDataDisplaying = () => {
   let [productDetails, setProductDetails] = useState({
@@ -11,19 +16,41 @@ const ApiDataDisplaying = () => {
   });
   let { productName, price, quantity, description } = productDetails;
 
+  let singleProduct = useSelector(
+    (state) => state.productApiStore.singleProduct
+  );
+
+  let isEdit=useSelector((state)=>state.productApiStore.isEdit);
   let dispatch = useDispatch();
-  let errorMessage = useSelector((state) => state.productApiStore.error);
-  let pendingMessage = useSelector((state) => state.productApiStore.pending);
   let productData = useSelector((state) => state.productApiStore.productsList);
   console.log(productData);
+
   let handleChange = (e) => {
     let { name, value } = e.target;
     setProductDetails({ ...productDetails, [name]: value });
   };
 
+  useEffect(()=>{
+    dispatch(fetchProducts());
+  },[]);
+
+  useEffect(()=>{
+    singleProduct&&
+    setProductDetails({
+      productName:singleProduct.productName,
+      price:singleProduct.price,
+      description:singleProduct.description,
+      quantity:singleProduct.quantity,
+    });
+  },[singleProduct]);
+
   let handleSubmit = (e) => {
     e.peventDefault();
-    dispatch(addProduct(productDetails));
+    if(isEdit){
+      dispatch(editProductData(singleProduct.id,productDetails));
+    }else{
+      dispatch(addProduct(productDetails));
+    }
     console.log("form submitted");
     setProductDetails({
       productName: "",
@@ -31,8 +58,6 @@ const ApiDataDisplaying = () => {
       description: "",
       quantity: "",
     });
-    console.log(errorMessage);
-    console.log(pendingMessage);
   };
 
   useEffect(() => {
@@ -89,8 +114,12 @@ const ApiDataDisplaying = () => {
               <p>Product Price : {product.price}</p>
               <p>Product Quantity : {product.quantity}</p>
               <p>Product Description : {product.description}</p>
-              <button>Edit</button>
-              <button>Delete</button>
+              <button onClick={() => dispatch(updateSingleProduct(product.id))}>
+                Edit
+              </button>
+              <button onClick={() => dispatch(deleteProductData(product.id))}>
+                Delete
+              </button>
             </article>
           );
         })}

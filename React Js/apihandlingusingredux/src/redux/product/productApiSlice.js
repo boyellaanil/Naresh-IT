@@ -1,23 +1,42 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addProduct, editProductData, fetchProducts } from "./productThunkApi";
+import { addProduct, deleteProductData, editProductData, fetchProducts } from "./productThunkApi";
 
-let productSlice=createSlice({
-    name:"productSlice",
-    initialState:{productsList :[],singleProduct:"",error:"  ",pending:false },
-    reducers:[],
-    extraReducers:(builder)=>{
-        builder
-        .addCase(fetchProducts.fulfilled,(state,action)=>{
-            state.productsList=action.payload
-        })
-        .addCase(addProduct.fulfilled,(state,action)=>{
-           state.productsList.push(action.payload.data);
-        })
-        .addCase(editProductData.fulfilled,(state,action)=>{
-            let indexValue=state.productsList.findIndex((value)=>value.id===action.payload.data.id);
-            console.log(indexValue);
-        });
+
+let productSlice = createSlice({
+  name: "productSlice",
+  initialState: {
+    productsList: [],
+    singleProduct: "",
+    isEdit:false
+  },
+  reducers: 
+    {
+      updateSingleProduct (state, action) {
+        console.log(action);
+        let data = state.productsList.find((value) => value.id === action.payload);
+        state.singleProduct=data;
+        state.isEdit=true;
+      },
     },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchProducts.fulfilled, (state, action) => {
+        state.productsList = action.payload;
+      })
+      .addCase(addProduct.fulfilled, (state, action) => {
+        state.productsList.push(action.payload.data);
+      })
+      .addCase(editProductData.fulfilled, (state, action) => {
+        let indexValue = state.productsList.findIndex(
+          (value) => value.id === action.payload.data.id
+        );
+        console.log(indexValue);
+      }) 
+      .addCase(deleteProductData.fulfilled,(state,action)=>{
+        let data =state.productsList.filter((value)=>value.id!==action.payload.data.id)
+      })
+  },
 });
 
+export let{updateSingleProduct}=productSlice.actions
 export default productSlice.reducer;
