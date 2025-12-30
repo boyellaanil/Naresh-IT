@@ -15,6 +15,7 @@ let productSlice=createSlice({
         })
         .addCase(editProductData.fulfilled,(state,action)=>{
             let indexValue=state.productsList.findIndex((value)=>value.id===action.payload.data.id);
+            console.log(indexValue);
         });
     },
 });
