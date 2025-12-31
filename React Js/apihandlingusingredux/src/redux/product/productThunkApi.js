@@ -25,7 +25,7 @@ export let addProduct=createAsyncThunk(
 
 export let editProductData=createAsyncThunk(
     "products/editProduct",
-    async(id,product)=>{
+    async({id,product})=>{
         let data=await editProduct(id,product);
         return data;
     }

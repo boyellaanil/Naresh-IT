@@ -23,7 +23,6 @@ const ApiDataDisplaying = () => {
   let isEdit=useSelector((state)=>state.productApiStore.isEdit);
   let dispatch = useDispatch();
   let productData = useSelector((state) => state.productApiStore.productsList);
-  console.log(productData);
 
   let handleChange = (e) => {
     let { name, value } = e.target;
@@ -47,7 +46,7 @@ const ApiDataDisplaying = () => {
   let handleSubmit = (e) => {
     e.peventDefault();
     if(isEdit){
-      dispatch(editProductData(singleProduct.id,productDetails));
+      dispatch(editProductData({id:singleProduct.id,product:productDetails}));
     }else{
       dispatch(addProduct(productDetails));
     }

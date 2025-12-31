@@ -31,6 +31,8 @@ let productSlice = createSlice({
           (value) => value.id === action.payload.data.id
         );
         console.log(indexValue);
+        console.log(action)
+        // state.productsList[indexValue]=action.payload.data;
       }) 
       .addCase(deleteProductData.fulfilled,(state,action)=>{
         let data =state.productsList.filter((value)=>value.id!==action.payload.data.id)
