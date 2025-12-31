@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Form = () => {
+const Form = ({handleChange,handleSubmit}) => {
+   
   return (
-    <div>Form</div>
+    <div>
+
+    </div>
   )
-}
+};
 
 export default Form
