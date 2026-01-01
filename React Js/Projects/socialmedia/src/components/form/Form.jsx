@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
-const Form = ({ data, handleChange, handleSubmit }) => {
+const Form = ({ data, handleChange }) => {
   return (
     <>
-      <form action=""onSubmit={handleSubmit}>
         {data.map((value) => {
           return (
             <article key={value.name}>
@@ -12,7 +11,6 @@ const Form = ({ data, handleChange, handleSubmit }) => {
             </article>
           );
         })}
-      </form>
     </>
   );
 };

@@ -2,9 +2,12 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import { RouterProvider } from "react-router-dom";
 import route from "./components/routes/Route";
+import { Provider } from "react-redux";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
+  <Provider store={store}>
     <RouterProvider router={route}>
-        <App/>
+      <App />
     </RouterProvider>
+  </Provider>
 );
