@@ -1,34 +1,48 @@
 import React from "react";
 import Form from "../../form/Form";
+import { useDispatch, useSelector } from "react-redux";
+import loginValidation from "../../redux/thunk/loginThunk";
 
 const Login = () => {
   let [userDetails, setUserDetails] = useState({
     email: "",
     password: "",
   });
-  let {email,password}=userDetails;
-  let loginData=[
+  let { userId, isLogin } = useSelector((state) => state.login.userDetails);
+  console.log(userId);
+  console.log(isLogin);
+  let dispatch = useDispatch();
+  let { email, password } = userDetails;
+  let loginData = [
     {
-      naame:"email",
-      type:"email",
-      value:email,
+      naame: "email",
+      type: "email",
+      value: email,
     },
     {
-      naame:"password",
-      type:"password",
-      value:password,
+      naame: "password",
+      type: "password",
+      value: password,
     },
   ];
-  let handleChange=(e)=>{
-    let {name,value}=e.target;
-    setUserDetails({...userDetails,[name]:value});
+  let handleChange = (e) => {
+    let { name, value } = e.target;
+    setUserDetails({ ...userDetails, [name]: value });
   };
-  return <div>
-    <form action="">
-      <Form data={loginData} handleChange={handleChange}/>
-      <button>Submit</button>
-    </form>
-  </div>;
+
+  let handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(userDetails);
+    dispatch(loginValidation(userDetails));
+  };
+  return (
+    <div>
+      <form action="" onSubmit={handleSubmit}>
+        <Form data={loginData} handleChange={handleChange} />
+        <button>Submit</button>
+      </form>
+    </div>
+  );
 };
 
 export default Login;
