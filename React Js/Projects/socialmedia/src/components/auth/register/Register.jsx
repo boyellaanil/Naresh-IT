@@ -12,6 +12,9 @@ const Register = () => {
     dob: "",
     contact: "",
     gender: "",
+    image: "",
+    followers: [],
+    following: [],
   });
   let { name, email, password, confirmPassword, dob, contact, gender } =
     userDetails;
@@ -67,6 +70,12 @@ const Register = () => {
     }
   };
 
+  let handleImage = async (e) => {
+    let image = e.target.files[0];
+    let convertedImage = await imageData(image);
+    // console.log(convertedImage);
+    setUserDetails({ ...userDetails, image: convertedImage });
+  };
   return (
     <form onSubmit={handleSubmit}>
       <Form
@@ -77,8 +86,12 @@ const Register = () => {
       <article name="gender" value={gender} onChange={handleChange}>
         <label htmlFor="">Gender</label>
         <input type="radio" value="male" name="gender" />
-        <input type="radio" value="female" name="gender"/>
-        <input type="radio" value="others" name="gender"/>
+        <input type="radio" value="female" name="gender" />
+        <input type="radio" value="others" name="gender" />
+      </article>
+      <article>
+        <label htmlFor="">Profile Pic</label>
+        <input type="file" onChange={handleImage} accept="image/*" />
       </article>
       <button>Submit</button>
     </form>
