@@ -9,7 +9,8 @@ let loginValidation = createAsyncThunk("auth/login", async (data) => {
   );
   console.log(singleUser);
   if (singleUser) {
+    sessionStorage.setItem("id", singleUser.id);
     return singleUser.id;
-  } 
+  }
 });
 export default loginValidation;

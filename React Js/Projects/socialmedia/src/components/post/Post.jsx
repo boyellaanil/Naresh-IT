@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { imageData } from "./../imageFunction/imageConverting";
+import { useDispatch } from "react-redux";
+import { addPostData } from "../redux/thunk/postThunk";
 
 const Post = () => {
   let date = new Date();
+  let id = sessionStorage.getItem("id");
+  let dispatch=useDispatch();
   let [postData, setPostDetails] = useState({
     image: "",
     caption: "",
-    userId: "",
+    userId: id,
     date: date,
   });
   let handleChange = (e) => {
@@ -21,6 +25,7 @@ const Post = () => {
   let handleSubmit = (e) => {
     e.preventDefault();
     console.log(postData);
+    dispatch(addPostData(postData));
   };
   return (
     <div>
