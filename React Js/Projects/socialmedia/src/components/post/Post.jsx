@@ -1,0 +1,47 @@
+import React, { useState } from "react";
+import { imageData } from "./../imageFunction/imageConverting";
+
+const Post = () => {
+  let date = new Date();
+  let [postData, setPostDetails] = useState({
+    image: "",
+    caption: "",
+    userId: "",
+    date: date,
+  });
+  let handleChange = (e) => {
+    let { name, value } = e.target;
+    setPostDetails({ ...postData, [name]: value });
+  };
+  let handleImage = async (e) => {
+    let imageValue = e.target.files[0];
+    let imageUrl = await imageData(imageValue);
+    setPostDetails({ ...postData, image: imageUrl });
+  };
+  let handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(postData);
+  };
+  return (
+    <div>
+      <form action="" onSubmit={handleSubmit}>
+        <aside>
+          <label htmlFor="">Upload Image</label>
+          <input type="file" name="" id="" onChange={handleChange} />
+        </aside>
+        <aside>
+          <label htmlFor="">Caption</label>
+          <input
+            type="text"
+            name="caption"
+            value={postData.caption}
+            onChange={handleChange}
+          />
+        </aside>
+        <aside>Post</aside>
+      </form>
+    </div>
+  );
+};
+
+export default Post;

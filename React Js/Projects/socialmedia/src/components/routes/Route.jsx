@@ -3,6 +3,7 @@ import App from "../../App";
 import Login from "../auth/login/Login"
 import Register from "../auth/register/Register"
 import Profile from "../profile/Profile";
+import Post from "../post/Post";
 let route=createBrowserRouter([
     {
         path:"/",
@@ -19,6 +20,10 @@ let route=createBrowserRouter([
             {
                 path:"/profile",
                 element:<Profile/>,
+            },
+            {
+                path:"/addPost",
+                element:<Post/>,
             },
         ],
     },
