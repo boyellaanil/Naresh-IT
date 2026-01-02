@@ -4,6 +4,7 @@ import Login from "../auth/login/Login"
 import Register from "../auth/register/Register"
 import Profile from "../profile/Profile";
 import Post from "../post/Post";
+import HomePage from "../home/HomePage";
 let route=createBrowserRouter([
     {
         path:"/",
@@ -24,6 +25,10 @@ let route=createBrowserRouter([
             {
                 path:"/addPost",
                 element:<Post/>,
+            },
+            {
+                path:"/home",
+                element:<HomePage/>,
             },
         ],
     },

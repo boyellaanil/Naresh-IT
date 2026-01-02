@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addUserData } from "../thunk/registerThunk";
+import { addUserData, fetchUsersData } from "../thunk/registerThunk";
 
 let registerSlice=createSlice({
     name:"registerSlice",

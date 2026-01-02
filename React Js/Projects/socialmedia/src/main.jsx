@@ -3,6 +3,7 @@ import App from "./App";
 import { RouterProvider } from "react-router-dom";
 import route from "./components/routes/Route";
 import { Provider } from "react-redux";
+import store from "./components/redux/store/store"
 
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
