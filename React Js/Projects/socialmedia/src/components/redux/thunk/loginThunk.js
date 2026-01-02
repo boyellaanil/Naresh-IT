@@ -9,10 +9,7 @@ let loginValidation = createAsyncThunk("auth/login", async (data) => {
   );
   console.log(singleUser);
   if (singleUser) {
-    alert("Login Successful");
     return singleUser.id;
-  } else {
-    alert("user not found");
-  }
+  } 
 });
 export default loginValidation;
