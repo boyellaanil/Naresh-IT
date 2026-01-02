@@ -28,7 +28,9 @@
 }
 /*!post*/
 #home section:first-child(2){
+    margin-top: 15px;
   display: flex;
+  justify-content: space-evenly;
 }
 
 section:first-child(2) article figure{
