@@ -20,5 +20,4 @@ const MultiVideo = ({ videos, videoRef, mouseEnter, mouseLeave,setVideo }) => {
     </>
   );
 };
-
 export default MultiVideo;
