@@ -8,5 +8,4 @@ const SingleVideo = ({video,handleClick,videoRef}) => {
       ></video>
   );
 };
-
 export default SingleVideo
