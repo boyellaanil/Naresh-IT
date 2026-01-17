@@ -6,8 +6,7 @@ import video2 from "../public/videos/status.mp4";
 import video3 from "../public/videos/yentho istamu.mp4";
 import video4 from "../public/videos/o chaitramasana.mp4";
 import Style from "./VideoPlayer.module.css";
-const VideoPlayer = () => {
- 
+const VideoPlayer = () => { 
   let videoRef = useRef([]);
   let [video,setVideo]=useState({
     src:" ",
