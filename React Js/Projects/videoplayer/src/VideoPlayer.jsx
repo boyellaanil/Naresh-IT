@@ -57,5 +57,4 @@ const VideoPlayer = () => {
     </section>
   );
 };
-
 export default VideoPlayer;
