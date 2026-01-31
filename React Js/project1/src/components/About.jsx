@@ -17,5 +17,4 @@ const styles = {
     textAlign: "center",
   },
 };
-
 export default About;
