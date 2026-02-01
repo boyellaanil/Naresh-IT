@@ -10,7 +10,6 @@ const About = () => {
     </div>
   );
 };
-
 const styles = {
   container: {
     padding: "40px",
