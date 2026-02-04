@@ -15,5 +15,4 @@ const styles = {
     textAlign: "center",
   },
 };
-
 export default Contact;
