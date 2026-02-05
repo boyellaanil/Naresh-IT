@@ -8,7 +8,6 @@ const Contact = () => {
     </div>
   );
 };
-
 const styles = {
   container: {
     padding: "40px",
