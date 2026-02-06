@@ -12,7 +12,6 @@ const Content = () => {
     </section>
   );
 };
-
 const styles = {
   container: {
     padding: "40px",
