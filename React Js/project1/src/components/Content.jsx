@@ -1,5 +1,4 @@
 import React from "react";
-
 const Content = () => {
   return (
     <section style={styles.container}>
