@@ -6,7 +6,6 @@ const Footer = () => {
     </footer>
   );
 };
-
 const styles = {
   footer: {
     backgroundColor: "#333",
