@@ -1,5 +1,4 @@
 import {createContext,useState} from "react"
-
 export let FormProvider=({children})=>{
     let [details,setDetails]=useState({
         UserName:"",
