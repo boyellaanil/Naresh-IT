@@ -25,4 +25,4 @@ return(
         value={{UserName,email,password, handleChange,handleSubmit}}
         {children}
     </formContext.Provider>
-)
+);
