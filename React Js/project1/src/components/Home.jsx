@@ -14,5 +14,4 @@ const styles = {
     textAlign: "center",
   },
 };
-
 export default Home;
