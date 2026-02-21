@@ -7,7 +7,6 @@ const Home = () => {
     </div>
   );
 };
-
 const styles = {
   container: {
     padding: "40px",
