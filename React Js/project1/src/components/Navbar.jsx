@@ -14,7 +14,6 @@ const Navbar = () => {
     </nav>
   );
 };
-
 const styles = {
   nav: {
     backgroundColor: "#222",
