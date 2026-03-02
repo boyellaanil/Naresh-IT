@@ -5,5 +5,4 @@ const Data = () => {
     <div>Data</div>
   )
 }
-
 export default Data
