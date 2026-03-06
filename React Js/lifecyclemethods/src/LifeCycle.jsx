@@ -35,7 +35,6 @@ export default class LifeCycle extends Component {
       console.log("component did update");
     }
   }
-
   // componentWillUnmount(){
   //   console.log("component will unmount is triggered")
   // };
