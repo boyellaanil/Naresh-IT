@@ -6,7 +6,6 @@ import DetailsData from './DetailsData';
 import Counter from './Counter';
 import DefaultProps from './DefaultProps';
 import Parent from './Parent';
-
 const App =()=>{
   let [count,setCount]=React.useState(0);
 
