@@ -8,7 +8,6 @@ import DefaultProps from './DefaultProps';
 import Parent from './Parent';
 const App =()=>{
   let [count,setCount]=React.useState(0);
-
   let inc=()=>setCount(count+1); 
   let dec=()=>setCount(count-1); 
   // let details={
