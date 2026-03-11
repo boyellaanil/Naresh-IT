@@ -8,5 +8,4 @@ const Child = ({userName}) => {
     </div>
   )
 }
-
 export default Child
