@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Child = ({userName}) => {
     console.log(userName);
   return (
