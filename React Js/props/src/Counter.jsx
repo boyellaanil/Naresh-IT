@@ -21,5 +21,4 @@ const counter=({countData:{count,inc,dec}})=>{
         </div>
     )
 }
-
 export default Counter
