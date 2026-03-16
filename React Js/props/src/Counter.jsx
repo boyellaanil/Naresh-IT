@@ -9,7 +9,6 @@ const Counter = ({count,inc,dec}) => {
     </div>
   );
 };
-
 //Alternate version - props destructured from nested object
 const counter=({countData:{count,inc,dec}})=>{
     console.log(count,inc,dec);
