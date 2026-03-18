@@ -1,5 +1,4 @@
 import React from "react";
-
 const DefaultProps = ({ userName = "world" }) => {
   return (
     <div>
