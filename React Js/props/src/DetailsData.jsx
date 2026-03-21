@@ -20,7 +20,6 @@ const DetailsData = (props) => {
     //         <p>Is Available : {isAvailable?"Online":"busy"}</p>
     //     </div>
     // )
-
     let {employeesData}=props;
     console.log(employeesData);
     return(
