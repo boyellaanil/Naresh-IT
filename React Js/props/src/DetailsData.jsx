@@ -1,7 +1,6 @@
 import React from "react";
 const DetailsData = (props) => {
-    // Destructuring props object
-
+            // Destructuring props object
     // console.log(props)
     // console.log(props.userDetails.userName)
     // let {userDetails}=props;
