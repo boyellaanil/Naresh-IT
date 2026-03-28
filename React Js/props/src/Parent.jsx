@@ -7,5 +7,4 @@ const Parent = ({userName}) => {
     </div>
   )
 }
-
 export default Parent
