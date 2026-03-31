@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Form from "./Form";
-
 export default class DispalyData extends Component {
   constructor() {
     super();
