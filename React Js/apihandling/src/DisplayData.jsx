@@ -11,7 +11,6 @@ export default class DispalyData extends Component {
       isEdit: false,
     };
   }
-
   // ! Creating the user
   addUser = async (userData) => {
     await fetch("http://localhost:3000/users", {
