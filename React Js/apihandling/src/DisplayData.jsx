@@ -21,7 +21,6 @@ export default class DispalyData extends Component {
       body: JSON.stringify(userData),
     });
   };
-
   // ! Getting the users data
   users = async () => {
     try {
