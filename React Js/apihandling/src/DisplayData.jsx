@@ -32,7 +32,6 @@ export default class DispalyData extends Component {
       console.log(error);
     }
   };
-
   // ! Toggle the state
   handleTrue = () => {
     this.setState({ loading: !this.state.loading });
