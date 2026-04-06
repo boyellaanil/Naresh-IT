@@ -36,7 +36,6 @@ export default class DispalyData extends Component {
   handleTrue = () => {
     this.setState({ loading: !this.state.loading });
   };
-
   // ! Delete the data
   handleDelete = async (id) => {
     await fetch(`http://localhost:3000/users/${id}`, {
