@@ -47,7 +47,6 @@ export default class DispalyData extends Component {
   componentDidMount() {
     this.users();
   }
-
   // ! Api calling when condition is satisfied
   componentDidUpdate(prevPros, prevState) {
     if (prevState.loading !== this.state.loading) {
