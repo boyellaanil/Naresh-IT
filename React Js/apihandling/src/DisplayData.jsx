@@ -53,7 +53,6 @@ export default class DispalyData extends Component {
       this.users();
     }
   }
-
   // ! Updating the data
   handleUpdate = (value) => {
     this.setState({ name: value.name, editData: value.id, isEdit: true });
