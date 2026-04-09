@@ -57,7 +57,6 @@ export default class DispalyData extends Component {
   handleUpdate = (value) => {
     this.setState({ name: value.name, editData: value.id, isEdit: true });
   };
-
   updateUserData = async (id, name) => {
     await fetch(`http://localhost:3000/users/${id}`, {
       method: "PUT",
