@@ -67,7 +67,6 @@ export default class DispalyData extends Component {
     });
     this.setState({ isEdit: false });
   };
-
   // ! Handle change for the form
   handleChange = (e) => {
     let { value } = e.target;
