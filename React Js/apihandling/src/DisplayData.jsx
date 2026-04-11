@@ -72,7 +72,6 @@ export default class DispalyData extends Component {
     let { value } = e.target;
     this.setState({ name: value });
   };
-
   // ! Handle submit for the form
   handleSubmit = async (e) => {
     e.preventDefault();
