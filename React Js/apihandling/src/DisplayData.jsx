@@ -81,7 +81,6 @@ export default class DispalyData extends Component {
     this.handleTrue();
     this.setState({ name: "" });
   };
-
   render() {
     console.log(this.state);
     return (
