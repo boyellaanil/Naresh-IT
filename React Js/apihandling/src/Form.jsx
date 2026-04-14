@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 const Form = ({ name, handleChange, handleSubmit }) => {
   return (
     <div>
