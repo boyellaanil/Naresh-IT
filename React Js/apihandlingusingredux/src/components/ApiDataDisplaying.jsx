@@ -6,7 +6,6 @@ import {
 } from "../redux/product/productThunkApi";
 import { useDispatch, useSelector } from "react-redux";
 import { updateSingleProduct } from "../redux/product/productApiSlice";
-
 const ApiDataDisplaying = () => {
   let [productDetails, setProductDetails] = useState({
     productName: "",
