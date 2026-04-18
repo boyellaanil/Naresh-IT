@@ -18,7 +18,6 @@ const ApiDataDisplaying = () => {
   let singleProduct = useSelector(
     (state) => state.productApiStore.singleProduct
   );
-
   let isEdit=useSelector((state)=>state.productApiStore.isEdit);
   let dispatch = useDispatch();
   let productData = useSelector((state) => state.productApiStore.productsList);
