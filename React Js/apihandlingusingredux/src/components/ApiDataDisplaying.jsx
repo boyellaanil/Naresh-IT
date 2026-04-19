@@ -26,7 +26,6 @@ const ApiDataDisplaying = () => {
     let { name, value } = e.target;
     setProductDetails({ ...productDetails, [name]: value });
   };
-
   useEffect(()=>{
     dispatch(fetchProducts());
   },[]);
