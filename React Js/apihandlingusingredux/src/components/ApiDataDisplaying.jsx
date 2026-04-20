@@ -21,7 +21,6 @@ const ApiDataDisplaying = () => {
   let isEdit=useSelector((state)=>state.productApiStore.isEdit);
   let dispatch = useDispatch();
   let productData = useSelector((state) => state.productApiStore.productsList);
-
   let handleChange = (e) => {
     let { name, value } = e.target;
     setProductDetails({ ...productDetails, [name]: value });
