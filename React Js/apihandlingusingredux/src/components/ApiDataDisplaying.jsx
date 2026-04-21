@@ -28,7 +28,6 @@ const ApiDataDisplaying = () => {
   useEffect(()=>{
     dispatch(fetchProducts());
   },[]);
-
   useEffect(()=>{
     singleProduct&&
     setProductDetails({
