@@ -37,7 +37,6 @@ const ApiDataDisplaying = () => {
       quantity:singleProduct.quantity,
     });
   },[singleProduct]);
-
   let handleSubmit = (e) => {
     e.peventDefault();
     if(isEdit){
