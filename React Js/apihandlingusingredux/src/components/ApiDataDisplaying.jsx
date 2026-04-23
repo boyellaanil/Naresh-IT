@@ -52,7 +52,6 @@ const ApiDataDisplaying = () => {
       quantity: "",
     });
   };
-
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
