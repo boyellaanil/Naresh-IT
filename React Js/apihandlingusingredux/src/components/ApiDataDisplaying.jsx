@@ -120,5 +120,4 @@ const ApiDataDisplaying = () => {
     </div>
   );
 };
-
 export default ApiDataDisplaying;
