@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { addProduct, deleteProductData, editProductData, fetchProducts } from "./productThunkApi";
 
-
 let productSlice = createSlice({
   name: "productSlice",
   initialState: {
