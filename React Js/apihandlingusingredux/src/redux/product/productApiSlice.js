@@ -37,6 +37,5 @@ let productSlice = createSlice({
       })
   },
 });
-
 export let{updateSingleProduct}=productSlice.actions
 export default productSlice.reducer;
