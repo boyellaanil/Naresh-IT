@@ -8,7 +8,6 @@ export let fetchProducts =createAsyncThunk(
         return data;
     }
 );
-
 // ! add product thunk
 
 export let addProduct=createAsyncThunk(
