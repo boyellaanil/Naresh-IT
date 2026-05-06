@@ -9,7 +9,6 @@ export let fetchProducts =createAsyncThunk(
     }
 );
 // ! add product thunk
-
 export let addProduct=createAsyncThunk(
     "prooducts/addProducts",
     async(product)=>{
