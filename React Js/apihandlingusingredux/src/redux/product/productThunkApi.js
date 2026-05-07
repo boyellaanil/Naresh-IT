@@ -17,7 +17,6 @@ export let addProduct=createAsyncThunk(
     }
 );
 // ! edit product data
-
 export let editProductData=createAsyncThunk(
     "products/editProduct",
     async({id,product})=>{
