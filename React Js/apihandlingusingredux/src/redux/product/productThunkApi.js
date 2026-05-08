@@ -24,7 +24,6 @@ export let editProductData=createAsyncThunk(
         return data;
     }
 );
-
 // ! delete the product data
 
 export let deleteProductData=createAsyncThunk(
