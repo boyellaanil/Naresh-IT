@@ -25,7 +25,6 @@ export let editProductData=createAsyncThunk(
     }
 );
 // ! delete the product data
-
 export let deleteProductData=createAsyncThunk(
     "products/deleteProduct",
     async(id)=>{
