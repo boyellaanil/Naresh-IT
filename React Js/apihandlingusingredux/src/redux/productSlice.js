@@ -1,6 +1,5 @@
 // import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 // import axios from "axios";
-
 // export let fetchProductApi=()=>axios.get("https://fakestoreapi.com/products");
 
 // export let fetchProducts = createAsyncThunk(
