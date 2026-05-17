@@ -7,5 +7,4 @@ let store=configureStore({
         productApiStore:productSliceApi,
     },  
 });
-
 export default store;
