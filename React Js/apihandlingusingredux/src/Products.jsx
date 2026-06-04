@@ -5,7 +5,6 @@ const Products = () => {
   let value = useSelector((state) => state.product.products);
   console.log(value);
   let dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
