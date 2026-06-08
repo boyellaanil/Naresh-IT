@@ -8,5 +8,4 @@ const Child1 = () => {
     </>
   );
 };
-
 export default Child1;
