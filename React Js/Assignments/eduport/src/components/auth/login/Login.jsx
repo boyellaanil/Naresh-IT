@@ -2,7 +2,6 @@ import React,{useEffect, useState,useContext} from "react";
 import CreateForm from "../../form/CreateForm";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../context/AuthContext";
-
 const Login = () => {
   let [loginDetails, setLoginDetails] = useState({
     email: "",
