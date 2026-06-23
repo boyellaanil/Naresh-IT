@@ -21,7 +21,6 @@ const Login = () => {
   useEffect(()=>{
     fetchUsers();
   },[]);
-
   let handleSubmit=()=>{
     validate(email,password); 
     isLogin && navigate("/displayCourses");
