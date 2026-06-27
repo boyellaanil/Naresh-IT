@@ -1,7 +1,6 @@
 import React,{useContext, useState} from 'react'
 import CreateForm from '../../form/CreateForm'
 import { authContext } from '../../context/AuthContext';
-
 const Register = () => {
   let [registerDetails,setRegisterDetails]=useState({
     name:"",
