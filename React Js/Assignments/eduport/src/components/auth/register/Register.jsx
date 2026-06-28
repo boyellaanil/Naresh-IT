@@ -13,7 +13,6 @@ const Register = () => {
     role:"user",
   });
   let {name,email,dob,password,contact,gender,address}=registerDetails;
-
   let {adduser}=useContext(authContext);
   let registerData=[
     {name:"name",stateValue:name,type:"text"},
