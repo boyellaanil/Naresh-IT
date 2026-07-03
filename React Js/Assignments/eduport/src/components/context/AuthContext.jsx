@@ -1,7 +1,6 @@
 import { createContext, useState } from "react";
 import axios from "axios";
 export let authContext= createContext();
-
 let  AuthProvider=({children})=>{
     let[usersdata,setUsersdata]=useState({
         users:[],
