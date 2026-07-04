@@ -31,5 +31,4 @@ let  AuthProvider=({children})=>{
     }
     return <authContext.Provider value={{ adduser,fetchUsers,validate,isLogin,userId,role }}>{children}</authContext.Provider>
 }
-
 export default AuthProvider;
