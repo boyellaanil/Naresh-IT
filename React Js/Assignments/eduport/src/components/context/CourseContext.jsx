@@ -1,7 +1,6 @@
 import {useState,createContext} from 'react';
 import axios from 'axios';
 import SingleCourse from './../courses/SingleCourse';
-
 export let courseContext=createContext();
 
 let CousreProvider=({children})=>{
