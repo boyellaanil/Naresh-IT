@@ -7,7 +7,6 @@ let CousreProvider=({children})=>{
         courses:[],
         singleCourse:"",
     });
-
     let {courses,singleCourse}=detailsCourse;
 
     let addCourse=async (data)=>{
