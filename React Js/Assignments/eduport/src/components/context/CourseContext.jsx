@@ -12,7 +12,6 @@ let CousreProvider=({children})=>{
     let addCourse=async (data)=>{
         await axios.post("http://localhost:3000/courses",data);
     };
-
     let fetchCourses=async ()=>{
        try{
          let {data}=await axios.get("http://localhost:3000/courses");
