@@ -1,7 +1,6 @@
 import { createContext, useState } from "react";
 import axios from "axios";
 export let trainerContext = createContext();
-
 let TrainerProvider = ({ children }) => {
   let [trainers, setTrainers] = useState({
     trainersData: [],
