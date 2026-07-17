@@ -6,7 +6,6 @@ let TrainerProvider = ({ children }) => {
     trainersData: [],
     singleTariner: {},
   });
-
   let { trainersData, singleTrainer } = trainers;
   let fetchTrainerData = async () => {
     try {
