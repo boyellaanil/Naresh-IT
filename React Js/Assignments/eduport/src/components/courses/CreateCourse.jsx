@@ -9,7 +9,6 @@ const CreateCourse = () => {
     technology:"",
     trainerName:"",
   })
-
   let {courseName,price,duration,technology,trainerName}=courseDetails;
   let{addCourse}=useContext(courseContext);
   let courseData=[
