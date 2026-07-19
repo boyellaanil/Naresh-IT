@@ -38,7 +38,6 @@ const CreateCourse = () => {
       type:"text",
     },
   ];
-
   let handleChange=(e)=>{
     let {name,value}=e.target;
     setCourseDetails({...courseDetails,[name]:value})  
