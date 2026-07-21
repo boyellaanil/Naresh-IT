@@ -6,7 +6,6 @@ const DisplayCourses = () => {
   useEffect(() => {
     fetchCourses();
   }, []);
-
   let navigate=useNavigate();
   let navigateToSingleCourse=(id)=>{
     navigate(`/singleCourse/${id}`);
