@@ -28,5 +28,4 @@ const DisplayCourses = () => {
     </div>
   );
 };
-
 export default DisplayCourses;
