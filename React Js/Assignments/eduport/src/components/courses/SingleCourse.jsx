@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { courseContext } from "../context/CourseContext";
-
 const SingleCourse = () => {
   let { id } = useParams();
   let { SingleCourse, fetchSingleCourse } = useContext(courseContext);
