@@ -21,5 +21,4 @@ const CreateForm = ({data,handleChange,handleSubmit}) => {
     </div>
   );
 };
-
 export default CreateForm;
