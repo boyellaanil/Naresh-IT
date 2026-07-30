@@ -1,6 +1,5 @@
 import React from "react";
 const CreateForm = ({data,handleChange,handleSubmit}) => {
-  
   return (
     <div>
       <form action="" onSubmit={handleSubmit}>
