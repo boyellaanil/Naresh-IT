@@ -22,5 +22,4 @@ const CreateNavbar = ({ data, removeId }) => {
     </div>
   );
 };
-
 export default CreateNavbar;
