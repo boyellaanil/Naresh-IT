@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
 const CreateNavbar = ({ data, removeId }) => {
   return (
     <div>
