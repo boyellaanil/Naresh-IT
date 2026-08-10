@@ -4,5 +4,4 @@ const Logo = () => {
     <section>Logo</section>
   )
 }
-
 export default Logo
