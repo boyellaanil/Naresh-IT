@@ -21,7 +21,6 @@
 .navbar section:nth-child(3){
     flex-basis: 30%;
 }
-
 .navbar ul{
     width: 90%;
     list-style: none;
