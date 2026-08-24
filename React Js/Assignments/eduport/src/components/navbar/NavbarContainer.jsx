@@ -12,5 +12,4 @@ const NavbarContainer = () => {
     </nav>
   )
 }
-
 export default NavbarContainer
