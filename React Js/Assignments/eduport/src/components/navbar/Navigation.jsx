@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import CreateNavbar from "./CreateNavbar";
 import { authContext } from "../context/AuthContext";
-
 const Navigation = () => {
   let { role } = useContext(authContext);
   let navData = [
