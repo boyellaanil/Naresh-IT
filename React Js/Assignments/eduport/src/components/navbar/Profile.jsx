@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import CreateNavbar from "./CreateNavbar";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../context/AuthContext";
-
 const Profile = () => {
   let navigate=useNavigate();
   let [data, setData] = useState({
