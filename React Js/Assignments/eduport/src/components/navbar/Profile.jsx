@@ -43,7 +43,6 @@ const Profile = () => {
   useEffect(() => {
     profileDataSetting();
   }, [userId]);
-
   let removeId=()=>{
     sessionStorage.removeItem("id");
     sessionStorage.removeItem("role");
