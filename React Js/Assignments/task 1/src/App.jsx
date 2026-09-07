@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import TaskDisplay from './TaskDisplay.jsx';
 import Buttons from './Buttons.jsx';
-
 const App = () => {
   let [dataState, setDataState] = useState(true);
 
