@@ -3,7 +3,6 @@ import TaskDisplay from './TaskDisplay.jsx';
 import Buttons from './Buttons.jsx';
 const App = () => {
   let [dataState, setDataState] = useState(true);
-
   const tasks = [
     { id: 1, task: "Complete React state practice", completed: true },
     { id: 2, task: "Review JavaScript ES6 concepts", completed: false },
