@@ -25,7 +25,6 @@ const App = () => {
     { id: 19, task: "Validate form inputs", completed: false },
     { id: 20, task: "Optimize images in project", completed: true },
   ];
-
   let completedData = tasks.filter((value) => value.completed === true);
   let inCompleteData = tasks.filter((value) => value.completed === false);
 
