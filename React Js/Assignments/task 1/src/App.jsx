@@ -27,7 +27,6 @@ const App = () => {
   ];
   let completedData = tasks.filter((value) => value.completed === true);
   let inCompleteData = tasks.filter((value) => value.completed === false);
-
   return (
     <div>
       <Buttons setDataState={setDataState} />
