@@ -9,5 +9,4 @@ const Buttons = ({ setDataState }) => {
     </div>
   );
 };
-
 export default Buttons;
