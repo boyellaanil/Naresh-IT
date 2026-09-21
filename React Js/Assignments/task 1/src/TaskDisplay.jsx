@@ -1,6 +1,5 @@
 import React from 'react'
 import Style from './TaskDisplay.module.css';
-
 const TaskDisplay = ({data,dataState}) => {
    console.log(data);
   let cssData = {
