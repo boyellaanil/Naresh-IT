@@ -27,5 +27,4 @@ const TaskDisplay = ({data,dataState}) => {
     </article>
   );
 }
-
 export default TaskDisplay
