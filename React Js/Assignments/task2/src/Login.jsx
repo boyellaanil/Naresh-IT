@@ -1,5 +1,4 @@
 import React from "react";
-
 const Login = ({handleSubmit,user,pass,switchToRegister}) => {
   return (
     <div>
