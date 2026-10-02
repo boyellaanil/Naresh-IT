@@ -18,5 +18,4 @@ const Login = ({handleSubmit,user,pass,switchToRegister}) => {
     </div>
   );
 };
-
 export default Login;
