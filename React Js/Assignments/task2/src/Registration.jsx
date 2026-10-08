@@ -1,5 +1,4 @@
 import React from "react";
-
 const Registration = ({handleSubmit,user,pass,switchToLogin}) => {
   return (
     <div>
