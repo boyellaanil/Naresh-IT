@@ -18,5 +18,4 @@ const Registration = ({handleSubmit,user,pass,switchToLogin}) => {
     </div>
   );
 };
-
 export default Registration;
